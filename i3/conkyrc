@@ -5,16 +5,15 @@ update_interval 1
 total_run_times 0
 short_units no
 pad_percents 3
-
-override_utf8_locale yes 
+override_utf8_locale no
 
 TEXT
 ,[
 {
-    "full_text": "${if_up eth0}${addr eth0}${else}${addr wlp2s0} at ${wireless_essid wlp2s0} [${wireless_link_qual_perc wlp2s0}%]}","color":"\#33CC99"
+    "full_text": "${if_up eth0}${addr eth0}${else}${addr wlp2s0} at ${wireless_essid wlp2s0} [${wireless_link_qual_perc wlp2s0}%]","color":"\#33CC99 ${endif}"
 },
-{"full_text": " \u2764 $acpitemp°C [$cpu%] ","color": "\#DC322F"},
-{"full_text": " \u9735 [$battery_percent%] ","color":"\#9933CC"},
+{"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
+{"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
 {
     "full_text": " RAM: ${memperc}% ",
     "color": ${if_match ${memperc}>90}"\#FF0000"${else}
@@ -22,7 +21,7 @@ TEXT
     ${endif} ${endif} 
 },
 {
-    "full_text": " ♪: ${exec amixer get 'Master,0' | grep % |awk '{print $5}' | tr -d '[]' | head -1}", "color":"\#268BD2" 
+    "full_text": " ♪: ${exec amixer get 'Master,0' | grep % |awk '{print $5}' | tr -d '[]' | head -1} ", "color":"\#268BD2" 
 },
 {
     "full_text": " ${time %a %d/%m/%Y} ${time %H:%M}",
