@@ -1,19 +1,32 @@
-background        no
-out_to_console 	  yes
-out_to_x	  no
-update_interval	  2
-total_run_times	  0
-short_units	  yes
-pad_percents	  3
+background no
+out_to_console yes
+out_to_x no
+update_interval 1
+total_run_times 0
+short_units no
+pad_percents 3
 
-override_utf8_locale yes
+override_utf8_locale yes 
 
 TEXT
-,[{"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
-  ${if_up wlp2s0}{"full_text": " ≈ ${wireless_essid wlp2s0} [${wireless_link_qual_perc wlp2s0}%] ","color":"\#33CC99"},
-  $else${if_up ppp0}{"full_text": " ≈ orange ","color":"\#33CC99"},$else
-  {"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif
-  {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
-  {"full_text": " ♪ [$mixer%] ", "color":"\#268BD2"},
-  {"full_text": " ${time %a %d %b} ${time %H:%M} "}
+,[
+{
+    "full_text": "${if_up eth0}${addr eth0}${else}${addr wlp2s0} at ${wireless_essid wlp2s0} [${wireless_link_qual_perc wlp2s0}%]}","color":"\#33CC99"
+},
+{"full_text": " \u2764 $acpitemp°C [$cpu%] ","color": "\#DC322F"},
+{"full_text": " \u9735 [$battery_percent%] ","color":"\#9933CC"},
+{
+    "full_text": " RAM: ${memperc}% ",
+    "color": ${if_match ${memperc}>90}"\#FF0000"${else}
+    ${if_match ${memperc}<10}"\#00CC00"${else} "\#ffffff"
+    ${endif} ${endif} 
+},
+{
+    "full_text": " ♪: ${exec amixer get 'Master,0' | grep % |awk '{print $5}' | tr -d '[]' | head -1}", "color":"\#268BD2" 
+},
+{
+    "full_text": " ${time %a %d/%m/%Y} ${time %H:%M}",
+    "color": ${if_match ${time %u}>5}"\#00CC00"${else}"\#CC0000"${endif}
+}
 ]
+
