@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/sh
 #removing some files and folders
 [ -d ~/.vim/autoload ] || mkdir -p ~/.vim/autoload
 [ -d ~/.vim ] || mkdir  ~/.vim

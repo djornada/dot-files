@@ -19,6 +19,7 @@ set si
 set smartcase
 set smarttab
 set tabstop=2
+set backspace=2
 set wildmenu
 set t_Co=256
 syntax on
