@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 #removing some files and folders
 [ -d ~/.vim/autoload ] || mkdir -p ~/.vim/autoload
 [ -d ~/.vim ] || mkdir  ~/.vim
@@ -19,6 +19,8 @@ git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone https://github.com/garbas/vim-snipmate.git
 git clone https://github.com/honza/vim-snippets.git
 git clone git://github.com/tpope/vim-surround.git
+git clone git://github.com/majutsushi/tagbar
+git clone https://github.com/scrooloose/syntastic.git
 
 cd ..
 mv bundle ~/.vim/
