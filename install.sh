@@ -1,8 +1,9 @@
-#!/usr/bin/zsh
+#!/bin/sh
 #removing some files and folders
 [ -d ~/.vim/autoload ] || mkdir -p ~/.vim/autoload
 [ -d ~/.vim ] || mkdir  ~/.vim
-[ -d ~/.i3 ] || mkdir -rf ~/.i3
+[ -d ~/.i3 ] || mkdir  ~/.i3
+[ -d ~/.vim/bundle ] && rm -rf ~/.vim/bundle
 
 wget https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 mv pathogen.vim ~/.vim/autoload
@@ -17,10 +18,18 @@ git clone https://github.com/tomtom/tlib_vim.git
 git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone https://github.com/garbas/vim-snipmate.git
 git clone https://github.com/honza/vim-snippets.git
+<<<<<<< HEAD
 git clone https://github.com/majutsushi/tagbar.git
+=======
+git clone git://github.com/tpope/vim-surround.git
+git clone git://github.com/majutsushi/tagbar
+git clone https://github.com/scrooloose/syntastic.git
+>>>>>>> 70c7cfabbbffb0f81d5ec4486665155cb03d7e8d
 
 cd ..
 mv bundle ~/.vim/
+
+[ -d ~/.oh-my-zsh ] || git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
 
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/zshrc ~/.zshrc
