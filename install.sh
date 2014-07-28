@@ -1,34 +1,12 @@
 #!/bin/sh
 #removing some files and folders
-[ -d ~/.vim/autoload ] || mkdir -p ~/.vim/autoload
-[ -d ~/.vim ] || mkdir  ~/.vim
 [ -d ~/.i3 ] || mkdir  ~/.i3
-[ -d ~/.vim/bundle ] && rm -rf ~/.vim/bundle
-
-wget https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
-mv pathogen.vim ~/.vim/autoload
-mkdir bundle
-cd bundle
-
-#Download vim plugins
-git clone https://github.com/romainl/Apprentice.git
-git clone https://github.com/scrooloose/nerdtree.git
-git clone https://github.com/vim-scripts/The-NERD-Commenter.git
-git clone https://github.com/tomtom/tlib_vim.git
-git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
-git clone https://github.com/garbas/vim-snipmate.git
-git clone https://github.com/honza/vim-snippets.git
-git clone git://github.com/tpope/vim-surround.git
-git clone git://github.com/majutsushi/tagbar
-git clone https://github.com/scrooloose/syntastic.git
-
-cd ..
-mv bundle ~/.vim/
-
+[ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 [ -d ~/.oh-my-zsh ] || git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
 
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/zshrc ~/.zshrc
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 
 #my i3 conf files
 chmod +x i3/conky

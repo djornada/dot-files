@@ -5,7 +5,7 @@ ZSH_THEME="muse"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting rails ruby)
 
 source $ZSH/oh-my-zsh.sh
 
