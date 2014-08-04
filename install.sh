@@ -13,3 +13,6 @@ chmod +x i3/conky
 ln -sf $(pwd)/i3/config ~/.i3/config
 ln -sf $(pwd)/i3/conky ~/.i3/conky
 ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
+ln -sf $(pwd)/Xresources ~/.Xresources
+
+
