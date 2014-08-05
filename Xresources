@@ -8,7 +8,7 @@ xterm*termName: xterm-color
 xterm*eightBitInput: false
 
 *xterm*background: #101010
-*xterm*foreground: #d0d0d0
+*xterm*foreground: #bcbcbc
 *xterm*cursorColor: #d0d0d0
 *xterm*color0: #101010
 *xterm*color1: #960050
