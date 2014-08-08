@@ -12,9 +12,9 @@ call vundle#begin()
   Plugin 'majutsushi/tagbar'
   Plugin 'pangloss/vim-javascript'
   Bundle 'jelera/vim-javascript-syntax'
-  Bundle "MarcWeber/vim-addon-mw-utils"
-  Bundle "tomtom/tlib_vim"
-  Bundle "garbas/vim-snipmate"
+  Bundle 'MarcWeber/vim-addon-mw-utils'
+  Bundle 'tomtom/tlib_vim'
+  Bundle 'garbas/vim-snipmate'
   Bundle 'honza/vim-snippets' 
   Plugin 'fholgado/minibufexpl.vim'
 call vundle#end()
@@ -45,12 +45,10 @@ set ignorecase
 set incsearch
 set magic
 set number
-set relativenumber
 set ruler
 set shiftwidth=4
 set si
 set smartcase
-set splitbelow
 set splitright
 set t_Co=256
 set tabstop=2
