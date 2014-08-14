@@ -1,8 +1,16 @@
 #!/bin/sh
-#removing some files and folders
+
+#i3WM config
 [ -d ~/.i3 ] || mkdir  ~/.i3
+
+#Vundle plugin manager to vim
+#https://github.com/gmarik/Vundle.vim
 [ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+#Oh My ZSH
 [ -d ~/.oh-my-zsh ] || git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
+
+[ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] || git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 
 
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/zshrc ~/.zshrc
@@ -14,3 +22,12 @@ ln -sf $(pwd)/i3/config ~/.i3/config
 ln -sf $(pwd)/i3/conky ~/.i3/conky
 ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
 ln -sf $(pwd)/Xresources ~/.Xresources
+
+#install vim plugins
+vim +BundleInstall +qall
+
+#update zshrc
+source ~/.zshrc
+
+#Update xrdb
+xrdb -merge ~/.Xresources
