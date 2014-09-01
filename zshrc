@@ -5,8 +5,7 @@ ZSH_THEME="steeef"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-plugins=(git zsh-syntax-highlighting rails ruby)
-
+plugins=(git zsh-syntax-highlighting rails ruby npm)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/diego/.local/bin:/home/diego/bin:/usr/local/texlive/2013/bin/x86_64-linux"
