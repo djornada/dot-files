@@ -3,29 +3,37 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Bundle 'Shougo/neocomplcache'
-  Bundle 'Shougo/neosnippet'
-  Bundle 'Shougo/neosnippet-snippets'
-  Bundle 'jelera/vim-javascript-syntax'
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'Shougo/neocomplcache'
+  Plugin 'Shougo/neosnippet'
   Plugin 'fholgado/minibufexpl.vim'
+  Plugin 'flazz/vim-colorschemes'
+  Plugin 'garbas/vim-snipmate'
   Plugin 'gmarik/Vundle.vim'
+  Plugin 'honza/vim-snippets'
+  Plugin 'jelera/vim-javascript-syntax'
   Plugin 'majutsushi/tagbar'
   Plugin 'pangloss/vim-javascript'
   Plugin 'romainl/Apprentice'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic.git'
+  Plugin 'tomtom/tlib_vim'
   Plugin 'tpope/vim-surround.git'
+
 call vundle#end()
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 colorscheme apprentice
+"minibufexpl on top when splitbelow enabled
+let g:miniBufExplBRSplit=0 
+let g:neocomplcache_enable_at_startup=1 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
+let g:neosnippet#enable_snipmate_compatibility=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:neocomplcache_enable_at_startup = 1 
 
 let mapleader = ','
 
@@ -52,9 +60,10 @@ set ruler
 set shiftwidth=4
 set si
 set smartcase
+set splitbelow
 set splitright
 set t_Co=256
-set tabstop=2
+set tabstop=4
 set wildignore=*.o,*.obj,*~
 set wildmenu
 syntax on

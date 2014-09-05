@@ -24,7 +24,7 @@ ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
 ln -sf $(pwd)/Xresources ~/.Xresources
 
 #install vim plugins
-vim +BundleInstall +qall
+vim +PluginInstall +PluginClean +qall
 
 #update zshrc
 source ~/.zshrc
