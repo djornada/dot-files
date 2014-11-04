@@ -1,16 +1,11 @@
-XTerm*faceName: Droid Sans Mono
+xterm*faceName: Droid Sans Mono
 xterm*faceSize: 11
-XTerm*scrollBar:false
+xterm*scrollBar:false
+xterm*selectToClipboard: true
 
-VT100.Translations: #override \
-        <Key>BackSpace: string(0x7F)\n\
-        <Key>Delete: string("\033[3~")\n\
-        <Key>Home: string("\033[1~")\n\
-        <Key>End: string("\033[4~")
-        *ttyModes: erase ^?
 xterm*background:  #262626
 xterm*foreground:  #bcbcbc
-xterm*color0:      #1E2320
+xterm*color0:      #1e2320
 xterm*color1:      #705050
 xterm*color2:      #60b48a
 xterm*color3:      #dfaf8f
@@ -26,3 +21,12 @@ xterm*color12:     #94bff3
 xterm*color13:     #ec93d3
 xterm*color14:     #93e0e3
 xterm*color15:     #ffffff
+
+Xterm.VT100.*Translations: #override \
+    BackSpace: string(0x7F)\n\
+    Delete: string("\033[3~")\n\
+    Home: string("\033[1~")\n\
+    End: string("\033[4~")
+    Shift Ctrl C: select-end(CLIPBOARD, CUT_BUFFER0) \n\
+    Shift Ctrl V: insert-selection(CLIPBOARD, CUT_BUFFER0)\n\
+    *ttyModes: erase ^?
