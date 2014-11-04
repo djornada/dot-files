@@ -26,6 +26,7 @@ call vundle#end()
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
 colorscheme apprentice
 

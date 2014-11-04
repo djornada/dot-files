@@ -1,4 +1,4 @@
-"set runtimepath=~/.vimperator
+set runtimepath=~/.vimperator
 set titlestring="Mozilla Firefox"
 set messages=100
 set verbose=1
@@ -14,3 +14,4 @@ set incsearch
 set smartcase
 set nofocuscontent
 set visualbell
+colorscheme darkness
