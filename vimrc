@@ -19,6 +19,7 @@ call vundle#begin()
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic.git'
   Plugin 'tomtom/tlib_vim'
+  Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
   Plugin 'wikitopian/hardmode'
 
@@ -27,6 +28,8 @@ filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.tex set textwidth=80
 
 colorscheme apprentice
 
@@ -36,7 +39,7 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
 let g:neosnippet#enable_snipmate_compatibility=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
-
+let g:syntastic_python_python_exec = '/usr/bin/python3'
 let mapleader = ','
 
 map <leader>b :MBEToggle<cr>
