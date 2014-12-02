@@ -7,6 +7,7 @@ call vundle#begin()
   Plugin 'MarcWeber/vim-addon-mw-utils'
   Plugin 'Shougo/neocomplcache'
   Plugin 'Shougo/neosnippet'
+  Plugin 'deris/vim-shot-f'
   Plugin 'fholgado/minibufexpl.vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'gmarik/Vundle.vim'
@@ -22,6 +23,7 @@ call vundle#begin()
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
   Plugin 'wikitopian/hardmode'
+  Plugin 'sophacles/vim-processing'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,7 +66,7 @@ set si
 set smartcase
 set splitbelow
 set splitright
-set t_Co=256
+"set t_Co=256
 set tabstop=4
 set wildignore=*.o,*.obj,*~
 set wildmenu

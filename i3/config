@@ -19,6 +19,7 @@ bindsym $mod+Return exec xterm
 # kill focused window
 bindsym $mod+Shift+q kill
 
+bindsym $mod+l exec slimlock
 # start dmenu (a program launcher)
 bindsym $mod+d exec "i3-dmenu-desktop"
 
