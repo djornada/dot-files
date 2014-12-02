@@ -1,32 +1,30 @@
-xterm*faceName: Droid Sans Mono
-xterm*faceSize: 11
-xterm*scrollBar:false
-xterm*selectToClipboard: true
+urxvt.font: xft: Dejavu Sans Mono:autohint=true:antialias=true:size=9
+urxvt.fading: 15
+urxvt.shading: 25
+urxvt.inheritPixmap: true
+urxvt.pointerColor: black
+urxvt.pointerColor2: white
+urxvt*termname: urxvt-256color
 
-xterm*background:  #262626
-xterm*foreground:  #bcbcbc
-xterm*color0:      #1e2320
-xterm*color1:      #705050
-xterm*color2:      #60b48a
-xterm*color3:      #dfaf8f
-xterm*color4:      #506070
-xterm*color5:      #dc8cc3
-xterm*color6:      #8cd0d3
-xterm*color7:      #dcdccc
-xterm*color8:      #709080
-xterm*color9:      #dca3a3
-xterm*color10:     #c3bf9f
-xterm*color11:     #f0dfaf
-xterm*color12:     #94bff3
-xterm*color13:     #ec93d3
-xterm*color14:     #93e0e3
-xterm*color15:     #ffffff
+urxvt.scrollBar:   false
+urxvt.selectToClipboard: true
+urxvt.dynamicColors: true
 
-Xterm.VT100.*Translations: #override \
-    BackSpace: string(0x7F)\n\
-    Delete: string("\033[3~")\n\
-    Home: string("\033[1~")\n\
-    End: string("\033[4~")
-    Shift Ctrl C: select-end(CLIPBOARD, CUT_BUFFER0) \n\
-    Shift Ctrl V: insert-selection(CLIPBOARD, CUT_BUFFER0)\n\
-    *ttyModes: erase ^?
+urxvt.foreground: #BCBCBC
+urxvt.background: #262626
+urxvt.color0:     #1C1C1C
+urxvt.color8:     #444444
+urxvt.color1:     #AF5F5F
+urxvt.color9:     #FF8700
+urxvt.color2:     #5F875F
+urxvt.color10:    #87AF87
+urxvt.color3:     #87875F
+urxvt.color11:    #FFFFAF
+urxvt.color4:     #5F87AF
+urxvt.color12:    #8FAFD7
+urxvt.color5:     #5F5F87
+urxvt.color13:    #8787AF
+urxvt.color6:     #5F8787
+urxvt.color14:    #5FAFAF
+urxvt.color7:     #6C6C6C
+urxvt.color15:    #FFFFFF

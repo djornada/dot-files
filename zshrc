@@ -10,6 +10,6 @@ export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="/usr/bin/vim"
 
-alias tmux="tmux -2" 
+#alias tmux="tmux -2" 
 
 TRAPUSR1() { rehash}; precmd() { [[ $history[$[ HISTCMD -1 ]] == *(yum|gem|export|npm|yi)* ]] && killall -USR1 zsh }

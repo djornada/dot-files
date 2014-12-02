@@ -31,7 +31,7 @@ filetype plugin indent on
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufReadPost *.tex set textwidth=80
+autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
 
 colorscheme apprentice
 
@@ -66,8 +66,9 @@ set si
 set smartcase
 set splitbelow
 set splitright
-"set t_Co=256
+set t_Co=235
 set tabstop=4
+set textwidth=80
 set wildignore=*.o,*.obj,*~
 set wildmenu
 
