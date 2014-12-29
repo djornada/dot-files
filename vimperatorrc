@@ -1,3 +1,6 @@
+map , <Leader>
+map <Leader>l :downloads<CR>
+
 set runtimepath=~/.vimperator
 set titlestring="Mozilla Firefox"
 set messages=100
