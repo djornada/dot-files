@@ -12,4 +12,4 @@ export EDITOR="/usr/bin/vim"
 
 #alias tmux="tmux -2" 
 
-TRAPUSR1() { rehash}; precmd() { [[ $history[$[ HISTCMD -1 ]] == *(yum|gem|export|npm|yi)* ]] && killall -USR1 zsh }
+TRAPUSR1() { rehash}; precmd() { [[ $history[$[ HISTCMD -1 ]] == *(pacman|gem|export|npm)* ]] && killall -USR1 zsh }
