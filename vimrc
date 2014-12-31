@@ -19,11 +19,11 @@ call vundle#begin()
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic.git'
+  Plugin 'sophacles/vim-processing'
   Plugin 'tomtom/tlib_vim'
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
   Plugin 'wikitopian/hardmode'
-  Plugin 'sophacles/vim-processing'
 
 call vundle#end()
 filetype plugin indent on

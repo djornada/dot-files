@@ -17,7 +17,7 @@
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/zshrc ~/.zshrc
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
-ln -sf $(pwd)/Xdefaults ~/.Xdefaults 
+ln -sf $(pwd)/Xresources ~/.Xresources 
 ln -sf $(pwd)/vimperatorrc ~/.vimperatorrc
 
 #my i3 conf files
