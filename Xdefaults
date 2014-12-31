@@ -1,0 +1,30 @@
+urxvt.font: xft: Dejavu Sans Mono:autohint=true:antialias=true:size=9
+urxvt.fading: 15
+urxvt.shading: 25
+!urxvt.inheritPixmap: true
+urxvt.pointerColor: black
+urxvt.pointerColor2: white
+urxvt*termname: urxvt-256color
+
+urxvt.scrollBar:   false
+urxvt.selectToClipboard: true
+!urxvt.dynamicColors: true
+
+urxvt.foreground: #BCBCBC
+urxvt.background: #262626
+urxvt.color0: #1C1C1C
+urxvt.color1: #AF5F5F
+urxvt.color2: #5F875F
+urxvt.color3: #87875F
+urxvt.color4: #5F87AF
+urxvt.color5: #5F5F87
+urxvt.color6: #5F8787
+urxvt.color7: #6C6C6C
+urxvt.color8: #444444
+urxvt.color9: #FF8700
+urxvt.color10: #87AF87
+urxvt.color11: #FFFFAF
+urxvt.color12: #8FAFD7
+urxvt.color13: #8787AF
+urxvt.color14: #5FAFAF
+urxvt.color15: #FFFFFF
