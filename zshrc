@@ -3,7 +3,7 @@ ZSH_THEME="simple"
 
 alias zscfg="vim ~/.zshrc"
 
-plugins=(git zsh-syntax-highlighting rails ruby npm yum tmuxinator)
+plugins=(git zsh-syntax-highlighting )
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin"
