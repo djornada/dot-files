@@ -38,6 +38,7 @@ colorscheme apprentice
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#eclim#enabled = 1
 
 let g:miniBufExplBRSplit=0 
 
@@ -80,3 +81,8 @@ set wildignore=*.o,*.obj,*~
 set wildmenu
 
 syntax on
+"gvim stuff
+set guioptions-=m "remove menu bar
+set guioptions-=T "remove tool bar
+set guioptions-=r "remove right hand scroll bar
+set guioptions-=L "remove left hand scroll bar
