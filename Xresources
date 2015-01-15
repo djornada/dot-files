@@ -1,17 +1,21 @@
-urxvt.font: xft: Droid Sans Mono:autohint=true:antialias=true:size=10
-urxvt.fading: 25
-urxvt.shading: 25
-urxvt.inheritPixmap: true
-urxvt.pointerColor: black
-urxvt.pointerColor2: white
 urxvt*termname: urxvt-256color
+urxvt.font: xft: Droid Sans Mono for Powerline:autohint=true:antialias=true:size=10, \
+            xft:WenQuanYi Bitmap Song:size=8, \
+            xft:FreeSerif:style=Regular, \
+            xft:unifont:style=Medium:antialias=false
 
+urxvt.dynamicColors: true
+urxvt.fading: 25
+urxvt.inheritPixmap: true
+urxvt.pointerColor2: white
+urxvt.pointerColor: black
 urxvt.scrollBar: false
 urxvt.selectToClipboard: true
-urxvt.dynamicColors: true
+urxvt.shading: 25
 
 urxvt.foreground: #BCBCBC
 urxvt.background: #262626
+
 urxvt.color0: #1C1C1C
 urxvt.color1: #AF5F5F
 urxvt.color2: #5F875F

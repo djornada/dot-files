@@ -1,15 +1,17 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="simple"
 
-alias zscfg="vim ~/.zshrc"
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART_ONCE=false
 
-plugins=(git zsh-syntax-highlighting )
+alias zscfg="vim ~/.zshrc"
+alias relzsh="source ~/.zshrc"
+
+plugins=(archlinux gem git npm rails tmux tmuxinator vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="/usr/bin/vim"
 
-#alias tmux="tmux -2" 
-
-TRAPUSR1() { rehash}; precmd() { [[ $history[$[ HISTCMD -1 ]] == *(pacman|gem|export|npm)* ]] && killall -USR1 zsh }
+TRAPUSR1() { rehash}; precmd() { [[ $history[$[ HISTCMD -1 ]] == *(pacin|gem|export|npm)* ]] && killall -USR1 zsh }

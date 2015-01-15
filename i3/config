@@ -2,7 +2,7 @@ focus_follows_mouse no
 
 set $mod Mod4
 
-font pango:Droid Sans Mono 10
+font pango:Droid Sans Mono for powerline 10
 
 set $blue  #005588
 set $gray1 #282828
@@ -19,24 +19,36 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+l exec slimlock
+bindsym $mod+b exec slimlock
 # start dmenu (a program launcher)
 bindsym $mod+d exec "i3-dmenu-desktop"
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# Change focus:
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
+
+# Change focus vi like:
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
+
+# move focused window vi like 
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v

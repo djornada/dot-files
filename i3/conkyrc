@@ -10,7 +10,7 @@ override_utf8_locale no
 TEXT
 ,[
 {
-    "full_text": "${if_up em1}${addr em1}${else}${addr wlp2s0} at ${wireless_essid wlp2s0} [${wireless_link_qual_perc wlp2s0}%]","color":"\#33CC99 ${endif}"
+    "full_text": "${if_up enp2s0}${addr enp2s0}${else}${addr wlp2s0} at ${wireless_essid wlp2s0} [${wireless_link_qual_perc wlp2s0}%]","color":"\#33CC99 ${endif}"
 },
 {"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
 {"full_text": " ☇ [$battery_percent%] $battery_time ","color":"\#9933CC"},

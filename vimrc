@@ -3,45 +3,52 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+  Plugin 'gmarik/Vundle.vim'
 
-  Plugin 'MarcWeber/vim-addon-mw-utils'
-  Plugin 'Shougo/neocomplcache'
-  Plugin 'Shougo/neosnippet'
-  Plugin 'deris/vim-shot-f'
+  Plugin 'bling/vim-airline'
   Plugin 'fholgado/minibufexpl.vim'
   Plugin 'garbas/vim-snipmate'
-  Plugin 'gmarik/Vundle.vim'
   Plugin 'honza/vim-snippets'
   Plugin 'jelera/vim-javascript-syntax'
   Plugin 'majutsushi/tagbar'
+  Plugin 'marcWeber/vim-addon-mw-utils'
   Plugin 'pangloss/vim-javascript'
   Plugin 'romainl/Apprentice'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
   Plugin 'scrooloose/syntastic.git'
+  Plugin 'shougo/neocomplcache'
+  Plugin 'shougo/neosnippet'
   Plugin 'sophacles/vim-processing'
   Plugin 'tomtom/tlib_vim'
+  Plugin 'tpope/vim-fugitive'
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
-  Plugin 'wikitopian/hardmode'
+  Plugin 'yggdroot/indentLine'
 
 call vundle#end()
+
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
 
 colorscheme apprentice
 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#branch#enabled = 1
+
 let g:miniBufExplBRSplit=0 
+
 let g:neocomplcache_enable_at_startup=1 
+let g:neosnippet#enable_snipmate_compatibility=1
+
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
-let g:neosnippet#enable_snipmate_compatibility=1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_python_python_exec = '/usr/bin/python3'
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+
 let mapleader = ','
 
 map <leader>b :MBEToggle<cr>
