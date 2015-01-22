@@ -1,33 +1,25 @@
 #!/bin/sh
-
-#i3WM config
 [ -d ~/.i3 ] || mkdir  ~/.i3
 
-#Vundle plugin manager to vim
-#https://github.com/gmarik/Vundle.vim
 [ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-#Oh My ZSH
 [ -d ~/.oh-my-zsh ] || git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
 
 [ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] || git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 
 
 [ -d ~/.vimperator/colors ] || git clone https://github.com/vimpr/vimperator-colors.git ~/.vimperator/colors
 
+vim +PluginInstall! +PluginClean +qall
+
+chmod +x i3/conky
+ln -sf $(pwd)/i3/config ~/.i3/config
+ln -sf $(pwd)/i3/conky ~/.i3/conky
+ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
 ln -sf $(pwd)/vimrc ~/.vimrc
 ln -sf $(pwd)/zshrc ~/.zshrc
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/Xresources ~/.Xresources 
 ln -sf $(pwd)/vimperatorrc ~/.vimperatorrc
+ln -sf $(pwd)/custom.zsh-theme ~/.oh-my-zsh/themes/custom.zsh-theme
 
-#my i3 conf files
-chmod +x i3/conky
-ln -sf $(pwd)/i3/config ~/.i3/config
-ln -sf $(pwd)/i3/conky ~/.i3/conky
-ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
-
-#install vim plugins
-vim +PluginInstall +PluginClean +qall
-
-#update zshrc
 source ~/.zshrc
