@@ -25,7 +25,7 @@ call vundle#begin()
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
   Plugin 'yggdroot/indentLine'
-
+  Plugin 'itchyny/screensaver.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -69,13 +69,14 @@ set incsearch
 set magic
 set number
 set ruler
-set shiftwidth=4
+set shiftwidth=8
 set si
 set smartcase
+set softtabstop=8
 set splitbelow
 set splitright
 set t_Co=235
-set tabstop=4
+set tabstop=8
 set textwidth=80
 set wildignore=*.o,*.obj,*~
 set wildmenu
