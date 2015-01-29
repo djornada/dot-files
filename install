@@ -9,7 +9,6 @@
 
 [ -d ~/.vimperator/colors ] || git clone https://github.com/vimpr/vimperator-colors.git ~/.vimperator/colors
 
-
 chmod +x i3/conky
 ln -sf $(pwd)/i3/config ~/.i3/config
 ln -sf $(pwd)/i3/conky ~/.i3/conky
@@ -25,9 +24,11 @@ ln -sf $(pwd)/xinitrc ~/.xinitrc
 git clone https://github.com/powerline/fonts.git
 cd fonts
 exec install.sh
+sleep 100
 cd ..
-rm -rf fonts
 
 vim +PluginInstall! +PluginClean +qall
 
 source ~/.zshrc
+
+rm -rf fonts/
