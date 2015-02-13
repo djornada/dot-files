@@ -20,15 +20,13 @@ ln -sf $(pwd)/Xresources ~/.Xresources
 ln -sf $(pwd)/vimperatorrc ~/.vimperatorrc
 ln -sf $(pwd)/custom.zsh-theme ~/.oh-my-zsh/themes/custom.zsh-theme
 ln -sf $(pwd)/xinitrc ~/.xinitrc
-
-git clone https://github.com/powerline/fonts.git
-cd fonts
-exec install.sh
-sleep 100
-cd ..
+ln -sf $(pwd)/compton.conf ~/.config/compton.conf
 
 vim +PluginInstall! +PluginClean +qall
 
 source ~/.zshrc
 
-rm -rf fonts/
+git clone https://github.com/powerline/fonts.git
+exec ./fonts/install.sh &
+wait $!
+rm -rf fonts
