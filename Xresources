@@ -12,14 +12,14 @@ urxvt.pointerColor: black
 urxvt.scrollBar: false
 urxvt.selectToClipboard: true
 urxvt.shading: 25
-urxvt.tintColor: cyan
+urxvt.tintColor: gray
 
 urxvt.foreground: #BCBCBC
 urxvt.background: #262626
 
 urxvt.color0: #1C1C1C
 urxvt.color1: #AF5F5F
-urxvt.color2: #5F875F
+urxvt.color2: #285244
 urxvt.color3: #87875F
 urxvt.color4: #5F87AF
 urxvt.color5: #5F5F87
