@@ -10,12 +10,16 @@ override_utf8_locale no
 TEXT
 ,[
 {
-    "full_text": "${if_up eth0}${addr eth0}${else}${addr wlan0} at ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%]","color":"\#33CC99 ${endif}"
+    "full_text": "${if_up wlan0}${addr wlan0} at ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%]","color":"\#33CC99${else}${addr eth0}${endif}"
 },
 {"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
-{"full_text": " ☇ [$battery_percent%] $battery_time ","color":"\#9933CC"},
 {
-    "full_text": " RAM: ${memperc}% ",
+        "full_text": " ☇ ${battery_percent BAT0}%", "min_width":"000%",
+        "color":"${if_match ${battery_percent BAT0} >66}\#7f9f7f
+                 ${else}${if_match ${battery_percent BAT0} < 33}\#dca3a3${else}\#c3bf9f${endif}${endif}"
+},
+{
+    "full_text": " RAM: ${mem} [${memperc}%]",
     "color": ${if_match ${memperc}>90}"\#FF0000"${else}
     ${if_match ${memperc}<10}"\#00CC00"${else} "\#ffffff"
     ${endif} ${endif} 
