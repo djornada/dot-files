@@ -4,7 +4,7 @@ ZSH_THEME="custom"
 alias zscfg="vim ~/.zshrc"
 alias relzsh="source ~/.zshrc"
 
-plugins=(archlinux debian gem git npm rails tmux tmuxinator zsh-syntax-highlighting)
+plugins=(archlinux debian gem git npm rails tmux tmuxinator zsh-syntax-highlighting pip)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin:"
