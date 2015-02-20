@@ -62,6 +62,7 @@ map <space> /
 
 set ai
 set backspace=2
+set clipboard=unnamedplus
 set cursorline
 set expandtab
 set ignorecase
