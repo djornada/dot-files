@@ -9,9 +9,12 @@ call vundle#begin()
   Plugin 'fholgado/minibufexpl.vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
+  Plugin 'itchyny/screensaver.vim'
   Plugin 'jelera/vim-javascript-syntax'
+  Plugin 'kien/ctrlp.vim'
   Plugin 'majutsushi/tagbar'
   Plugin 'marcWeber/vim-addon-mw-utils'
+  Plugin 'mileszs/ack.vim'
   Plugin 'pangloss/vim-javascript'
   Plugin 'romainl/Apprentice'
   Plugin 'scrooloose/nerdcommenter'
@@ -25,7 +28,6 @@ call vundle#begin()
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
   Plugin 'yggdroot/indentLine'
-  Plugin 'itchyny/screensaver.vim'
 call vundle#end()
 
 filetype plugin indent on
