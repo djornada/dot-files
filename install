@@ -33,6 +33,7 @@ ln -sf $(pwd)/Xresources ~/.Xresources
 ln -sf $(pwd)/xinitrc ~/.xinitrc
 ln -sf $(pwd)/compton.conf ~/.config/compton.conf
 
+ln -sf $(pwd)/gitconfig ~/.gitconfig
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 
 #Powerline fonts
