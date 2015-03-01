@@ -29,9 +29,9 @@ source ~/.zshrc
 ln -sf $(pwd)/vimperatorrc ~/.vimperatorrc
 
 #X config
-ln -sf $(pwd)/Xresources ~/.Xresources 
-ln -sf $(pwd)/xinitrc ~/.xinitrc
-ln -sf $(pwd)/compton.conf ~/.config/compton.conf
+ln -sf $(pwd)/X/Xresources ~/.Xresources 
+ln -sf $(pwd)/X/xinitrc ~/.xinitrc
+ln -sf $(pwd)/X/compton.conf ~/.config/compton.conf
 
 ln -sf $(pwd)/gitconfig ~/.gitconfig
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
