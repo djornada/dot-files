@@ -16,6 +16,7 @@ call vundle#begin()
   Plugin 'marcWeber/vim-addon-mw-utils'
   Plugin 'mileszs/ack.vim'
   Plugin 'pangloss/vim-javascript'
+  Plugin 'raimondi/delimitMate'
   Plugin 'romainl/Apprentice'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'scrooloose/nerdtree'
@@ -28,6 +29,7 @@ call vundle#begin()
   Plugin 'tpope/vim-markdown'
   Plugin 'tpope/vim-surround.git'
   Plugin 'yggdroot/indentLine'
+
 call vundle#end()
 
 filetype plugin indent on
