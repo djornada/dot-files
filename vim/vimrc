@@ -6,6 +6,7 @@ call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
 
   Plugin 'bling/vim-airline'
+  Plugin 'ervandew/supertab'
   Plugin 'fholgado/minibufexpl.vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
@@ -68,7 +69,6 @@ set ai
 set backspace=2
 set clipboard=unnamedplus
 set cursorline
-set expandtab
 set ignorecase
 set incsearch
 set magic
