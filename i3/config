@@ -2,7 +2,7 @@ focus_follows_mouse no
 
 set $mod Mod4
 
-font pango:Droid Sans Mono for powerline 10
+font pango:Cousine for powerline 10
 
 set $blue  #005588
 set $gray1 #282828

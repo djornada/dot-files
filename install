@@ -37,7 +37,9 @@ ln -sf $(pwd)/gitconfig ~/.gitconfig
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 
 #Powerline fonts
+git clone https://github.com/azuwis/.fonts_powerline.git ~/.fonts
 git clone https://github.com/powerline/fonts.git
 exec ./fonts/install.sh &
 wait $!
+
 rm -rf fonts
