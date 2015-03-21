@@ -17,4 +17,5 @@ set incsearch
 set smartcase
 set nofocuscontent
 set visualbell
+set defesearch=google
 colorscheme darkness
