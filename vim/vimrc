@@ -4,12 +4,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
-
   Plugin 'bling/vim-airline'
   Plugin 'fholgado/minibufexpl.vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
   Plugin 'jelera/vim-javascript-syntax'
+  Plugin 'junegunn/goyo.vim'
+  Plugin 'junegunn/limelight.vim'
+  Plugin 'junegunn/seoul256.vim'
+  Plugin 'junegunn/vim-easy-align'
   Plugin 'kien/ctrlp.vim'
   Plugin 'majutsushi/tagbar'
   Plugin 'marcWeber/vim-addon-mw-utils'
@@ -25,10 +28,10 @@ call vundle#begin()
   Plugin 'tomtom/tlib_vim'
   Plugin 'tpope/vim-fugitive'
   Plugin 'tpope/vim-markdown'
+  Plugin 'tpope/vim-repeat'
   Plugin 'tpope/vim-surround.git'
+  Plugin 'vim-scripts/visualrepeat'
   Plugin 'yggdroot/indentLine'
-
-
 call vundle#end()
 
 filetype plugin indent on
