@@ -40,7 +40,5 @@ ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 [ -d ~/.fonts ] && rm -rf ~/.fonts
 git clone https://github.com/azuwis/.fonts_powerline.git ~/.fonts
 wait $! 
-exec ./fonts/install.sh
-wait $!
 
 rm -rf fonts
