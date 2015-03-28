@@ -40,7 +40,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
 
-colorscheme apprentice
+colorscheme seoul256
 
 let g:miniBufExplBRSplit=0 
 
@@ -79,7 +79,6 @@ set smartcase
 set softtabstop=4
 set splitbelow
 set splitright
-set t_Co=235
 set tabstop=4
 set textwidth=80
 set wildignore=*.o,*.obj,*~
