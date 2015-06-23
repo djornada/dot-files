@@ -19,7 +19,6 @@ call vundle#begin()
   Plugin 'marcWeber/vim-addon-mw-utils'
   Plugin 'mhinz/vim-signify'
   Plugin 'mileszs/ack.vim'
-  Plugin 'mileszs/ack.vim'
   Plugin 'pangloss/vim-javascript'
   Plugin 'raimondi/delimitMate'
   Plugin 'scrooloose/nerdcommenter'
