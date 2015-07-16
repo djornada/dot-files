@@ -3,37 +3,36 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-  Plugin 'gmarik/Vundle.vim'
+	Plugin 'gmarik/Vundle.vim'
 
-  Plugin 'bling/vim-airline'
-  Plugin 'djjcast/mirodark'
-  Plugin 'fholgado/minibufexpl.vim'
-  Plugin 'garbas/vim-snipmate'
-  Plugin 'honza/vim-snippets'
-  Plugin 'jelera/vim-javascript-syntax'
-  Plugin 'junegunn/goyo.vim'
-  Plugin 'junegunn/limelight.vim'
-  Plugin 'junegunn/seoul256.vim'
-  Plugin 'junegunn/vim-easy-align'
-  Plugin 'kien/ctrlp.vim'
-  Plugin 'majutsushi/tagbar'
-  Plugin 'marcWeber/vim-addon-mw-utils'
-  Plugin 'mhinz/vim-signify'
-  Plugin 'mileszs/ack.vim'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'raimondi/delimitMate'
-  Plugin 'scrooloose/nerdcommenter'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'scrooloose/syntastic.git'
-  Plugin 'shougo/neocomplcache'
-  Plugin 'shougo/neosnippet'
-  Plugin 'tomtom/tlib_vim'
-  Plugin 'tpope/vim-markdown'
-  Plugin 'tpope/vim-repeat'
-  Plugin 'tpope/vim-surround.git'
-  Plugin 'yggdroot/indentLine'
+	Plugin 'bling/vim-airline'
+	Plugin 'djjcast/mirodark'
+	Plugin 'fholgado/minibufexpl.vim'
+	Plugin 'garbas/vim-snipmate'
+	Plugin 'honza/vim-snippets'
+	Plugin 'jelera/vim-javascript-syntax'
+	Plugin 'junegunn/goyo.vim'
+	Plugin 'junegunn/limelight.vim'
+	Plugin 'junegunn/seoul256.vim'
+	Plugin 'junegunn/vim-easy-align'
+	Plugin 'kien/ctrlp.vim'
+	Plugin 'majutsushi/tagbar'
+	Plugin 'marcWeber/vim-addon-mw-utils'
+	Plugin 'mhinz/vim-signify'
+	Plugin 'mileszs/ack.vim'
+	Plugin 'pangloss/vim-javascript'
+	Plugin 'raimondi/delimitMate'
+	Plugin 'scrooloose/nerdcommenter'
+	Plugin 'scrooloose/nerdtree'
+	Plugin 'scrooloose/syntastic.git'
+	Plugin 'shougo/neocomplcache'
+	Plugin 'shougo/neosnippet'
+	Plugin 'tomtom/tlib_vim'
+	Plugin 'tpope/vim-markdown'
+	Plugin 'tpope/vim-repeat'
+	Plugin 'tpope/vim-surround.git'
 
-  Plugin 'mips.vim'
+	Plugin 'mips.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -56,8 +55,6 @@ let g:syntastic_enable_signs=1
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
-"let g:tex_conceal = ""
-
 let mapleader = ','
 
 map <leader>b :MBEToggle<cr>
@@ -68,7 +65,16 @@ map <leader>t :TagbarToggle<CR>
 map <leader>w :w!<cr>
 map <space> /
 
+"indent
 set ai
+set shiftwidth=4
+set list
+set listchars=tab:▸\ 
+set tabstop=4
+set shiftround
+set nosmartindent
+set noexpandtab
+
 set backspace=2
 set clipboard=unnamedplus
 set cursorline
@@ -77,14 +83,9 @@ set incsearch
 set magic
 set number
 set ruler
-set shiftwidth=4
-set si
 set smartcase
-set softtabstop=4
 set splitbelow
 set splitright
-set tabstop=4
-set textwidth=80
 set wildignore=*.o,*.obj,*~
 set wildmenu
 
