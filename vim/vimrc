@@ -6,6 +6,7 @@ call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
 
   Plugin 'bling/vim-airline'
+  Plugin 'djjcast/mirodark'
   Plugin 'fholgado/minibufexpl.vim'
   Plugin 'garbas/vim-snipmate'
   Plugin 'honza/vim-snippets'
@@ -41,7 +42,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
 
-colorscheme seoul256
+colorscheme mirodark
 
 let g:miniBufExplBRSplit=0 
 
