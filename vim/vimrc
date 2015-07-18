@@ -27,6 +27,7 @@ call vundle#begin()
 	Plugin 'scrooloose/syntastic.git'
 	Plugin 'shougo/neocomplcache'
 	Plugin 'shougo/neosnippet'
+	Plugin 'sophacles/vim-processing'
 	Plugin 'tomtom/tlib_vim'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
@@ -65,7 +66,6 @@ map <leader>t :TagbarToggle<CR>
 map <leader>w :w!<cr>
 map <space> /
 
-"indent
 set ai
 set shiftwidth=4
 set list
