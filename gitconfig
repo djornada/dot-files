@@ -1,13 +1,16 @@
 [user]
 	email = diego.p.jornada@gmail.com
 	name = Diego Pinto da Jornada
-
 [push]
 	default = matching
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [diff]
-		tool = vimdiff
+	tool = vimdiff
 [difftool]
-		prompt = false
+	prompt = false
+[github]
+	user = djornada
+[alias]
+	st = status
