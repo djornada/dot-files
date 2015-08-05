@@ -6,14 +6,11 @@ call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
 	Plugin 'bling/vim-airline'
-	Plugin 'djjcast/mirodark'
-	Plugin 'fholgado/minibufexpl.vim'
 	Plugin 'garbas/vim-snipmate'
 	Plugin 'honza/vim-snippets'
 	Plugin 'jelera/vim-javascript-syntax'
 	Plugin 'junegunn/goyo.vim'
 	Plugin 'junegunn/limelight.vim'
-	Plugin 'junegunn/seoul256.vim'
 	Plugin 'junegunn/vim-easy-align'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'majutsushi/tagbar'
@@ -27,25 +24,32 @@ call vundle#begin()
 	Plugin 'scrooloose/syntastic.git'
 	Plugin 'shougo/neocomplcache'
 	Plugin 'shougo/neosnippet'
+	Plugin 'sophacles/vim-processing'
 	Plugin 'tomtom/tlib_vim'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround.git'
+	Plugin 'w0ng/vim-hybrid'
 
 	Plugin 'mips.vim'
 call vundle#end()
 
+colorscheme hybrid
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
 
-colorscheme mirodark
-
-let g:miniBufExplBRSplit=0 
+let g:miniBufExplBRSplit=0
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type = 2
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
 
 let g:neocomplcache_enable_at_startup=1 
 let g:neosnippet#enable_snipmate_compatibility=1
@@ -69,7 +73,7 @@ map <space> /
 set ai
 set shiftwidth=4
 set list
-set listchars=tab:▸\ 
+set listchars=trail:·,eol:↲,tab:»\ 
 set tabstop=4
 set shiftround
 set nosmartindent
@@ -88,6 +92,7 @@ set splitbelow
 set splitright
 set wildignore=*.o,*.obj,*~
 set wildmenu
+set ls=2
 
 syntax on
 "gvim stuff
