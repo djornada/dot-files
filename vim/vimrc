@@ -69,7 +69,6 @@ map <leader>t :TagbarToggle<CR>
 map <leader>w :w!<cr>
 map <space> /
 
-"indent
 set ai
 set shiftwidth=4
 set list
