@@ -13,4 +13,4 @@ export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="/usr/bin/vim"
 
-TRAPUSR1() { rehash}; precmd() { [[ $history[$[ HISTCMD -1 ]] == *(pacin|gem|export|npm)* ]] && killall -USR1 zsh }
+zstyle ':completion:*' rehash true
