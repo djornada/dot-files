@@ -80,7 +80,6 @@ set noexpandtab
 
 set backspace=2
 set clipboard=unnamedplus
-set cursorline
 set ignorecase
 set incsearch
 set magic
