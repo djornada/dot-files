@@ -4,32 +4,29 @@ urxvt.font: xft: Cousine for powerline:autohint=true:antialias=true:size=10, \
             xft:FreeSerif:style=Regular, \
             xft:unifont:style=Medium:antialias=false
 
-urxvt.dynamicColors: true
-urxvt.fading: 25
-urxvt.inheritPixmap: true
-urxvt.pointerColor2: white
-urxvt.pointerColor: black
+!urxvt.dynamicColors: true
+!urxvt.inheritPixmap: true
+!urxvt.pointerColor2: white
+!urxvt.pointerColor: black
 urxvt.scrollBar: false
 urxvt.selectToClipboard: true
-urxvt.shading: 25
-urxvt.tintColor: gray
 
-urxvt.foreground: #BCBCBC
-urxvt.background: #262626
-
-urxvt.color0: #1C1C1C
-urxvt.color1: #AF5F5F
-urxvt.color2: #285244
-urxvt.color3: #87875F
-urxvt.color4: #5F87AF
-urxvt.color5: #5F5F87
-urxvt.color6: #5F8787
-urxvt.color7: #6C6C6C
-urxvt.color8: #444444
-urxvt.color9: #FF8700
-urxvt.color10: #87AF87
-urxvt.color11: #FFFFAF
-urxvt.color12: #8FAFD7
-urxvt.color13: #8787AF
-urxvt.color14: #5FAFAF
-urxvt.color15: #FFFFFF
+! PaperColor Theme
+*.foreground: #4d4d4c
+*.background: #eeeeee
+*.color0: #ededed
+*.color8: #969694
+*.color1: #d7005f
+*.color9: #d7005f
+*.color2: #718c00
+*.color10: #718c00
+*.color3: #d75f00
+*.color11: #d75f00
+*.color4: #4271ae
+*.color12: #4271ae
+*.color5: #8959a8
+*.color13: #8959a8
+*.color6: #3e999f
+*.color14: #3e999f
+*.color7: #4d4d4c
+*.color15: #f5f5f5
