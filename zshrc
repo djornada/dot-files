@@ -1,8 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="custom"
 
-ZSH_TMUX_AUTOSTART=true
-
 alias zscfg="vim ~/.zshrc"
 alias relzsh="source ~/.zshrc"
 
