@@ -9,8 +9,6 @@ call vundle#begin()
 	Plugin 'garbas/vim-snipmate'
 	Plugin 'honza/vim-snippets'
 	Plugin 'jelera/vim-javascript-syntax'
-	Plugin 'junegunn/goyo.vim'
-	Plugin 'junegunn/limelight.vim'
 	Plugin 'junegunn/vim-easy-align'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'majutsushi/tagbar'
@@ -24,14 +22,11 @@ call vundle#begin()
 	Plugin 'scrooloose/syntastic.git'
 	Plugin 'shougo/neocomplcache'
 	Plugin 'shougo/neosnippet'
-	Plugin 'sophacles/vim-processing'
 	Plugin 'tomtom/tlib_vim'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround.git'
 	Plugin 'NLKNguyen/papercolor-theme'
-
-	Plugin 'mips.vim'
 call vundle#end()
 
 colorscheme PaperColor
@@ -56,7 +51,7 @@ let g:neosnippet#enable_snipmate_compatibility=1
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
-let g:syntastic_python_python_exec = '/usr/bin/python3'
+"let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 let mapleader = ','
