@@ -6,25 +6,22 @@ call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
 	Plugin 'bling/vim-airline'
-	Plugin 'garbas/vim-snipmate'
 	Plugin 'honza/vim-snippets'
-	Plugin 'jelera/vim-javascript-syntax'
 	Plugin 'kien/ctrlp.vim'
-	Plugin 'marcWeber/vim-addon-mw-utils'
+	Plugin 'majutsushi/tagbar'
 	Plugin 'mhinz/vim-signify'
 	Plugin 'mileszs/ack.vim'
-	Plugin 'pangloss/vim-javascript'
+	Plugin 'nlknguyen/papercolor-theme'
 	Plugin 'raimondi/delimitMate'
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'scrooloose/syntastic.git'
-	Plugin 'shougo/neocomplcache'
-	Plugin 'shougo/neosnippet'
-	Plugin 'tomtom/tlib_vim'
+	Plugin 'sirver/ultisnips'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround.git'
-	Plugin 'nlknguyen/papercolor-theme'
+	Plugin 'valloric/youcompleteme'
+
 call vundle#end()
 
 colorscheme PaperColor
@@ -34,8 +31,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
 
-let g:miniBufExplBRSplit=0
-
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
@@ -43,13 +38,15 @@ let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#tab_nr_type = 2
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 
-let g:neocomplcache_enable_at_startup=1 
-let g:neosnippet#enable_snipmate_compatibility=1
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
-"let g:syntastic_python_python_exec = '/usr/bin/python3'
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 let mapleader = ','
