@@ -29,7 +29,7 @@ filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufReadPost *.tex set filetype=tex 
+autocmd BufNewFile,BufReadPost *.tex set filetype=tex
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -39,7 +39,6 @@ let g:airline#extensions#tabline#tab_nr_type = 2
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -80,6 +79,7 @@ set splitright
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
+set bg=dark
 
 syntax on
 "gvim stuff
