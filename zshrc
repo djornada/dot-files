@@ -4,9 +4,9 @@ ZSH_THEME="custom"
 alias zscfg="vim ~/.zshrc"
 alias relzsh="source ~/.zshrc"
 
-#ZSH_TMUX_AUTOCONNECT=false
-#ZSH_TMUX_AUTOSTART_ONCE=true
-#ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOSTART_ONCE=true
+ZSH_TMUX_AUTOSTART=true
 
 plugins=(archlinux debian gem git npm rails rake tmux tmuxinator zsh-syntax-highlighting pip)
 
