@@ -16,11 +16,11 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'scrooloose/nerdtree'
 	Plugin 'scrooloose/syntastic.git'
+	Plugin 'shougo/neocomplete'
 	Plugin 'sirver/ultisnips'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround.git'
-	Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 
@@ -38,7 +38,9 @@ let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#tab_nr_type = 2
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
-let g:ycm_key_list_select_completion=[]
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 2
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
