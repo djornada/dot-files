@@ -6,25 +6,22 @@ call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
 	Plugin 'bling/vim-airline'
+	Plugin 'evgenyzinoviev/vim-vendetta'
 	Plugin 'honza/vim-snippets'
 	Plugin 'kien/ctrlp.vim'
-	Plugin 'majutsushi/tagbar'
-	Plugin 'mhinz/vim-signify'
 	Plugin 'mileszs/ack.vim'
-	Plugin 'nlknguyen/papercolor-theme'
-	Plugin 'raimondi/delimitMate'
+	Plugin 'raimondi/delimitmate'
 	Plugin 'scrooloose/nerdcommenter'
-	Plugin 'scrooloose/nerdtree'
-	Plugin 'scrooloose/syntastic.git'
+	Plugin 'scrooloose/syntastic'
 	Plugin 'shougo/neocomplete'
 	Plugin 'sirver/ultisnips'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
-	Plugin 'tpope/vim-surround.git'
+	Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
-colorscheme PaperColor
+colo vendetta
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -81,7 +78,6 @@ set splitright
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
-set bg=dark
 
 syntax on
 "gvim stuff
