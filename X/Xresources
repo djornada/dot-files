@@ -1,41 +1,38 @@
-*.font: xft: Cousine for powerline:autohint=true:antialias=true:size=10, \
-
+*.font: xft: Cousine for powerline:autohint=true:antialias=true:size=10
 *.scrollBar: false
 *.selectToClipboard: true
 
-! special
- *.foreground:   #ababab
- *.background:   #000000
- *.cursorColor:  #ababab
+*background: #002b36
+*color0: #073642
+*color10: #586e75
+*color11: #657b83
+*color12: #839496
+*color13: #6c71c4
+*color14: #93a1a1
+*color15: #fdf6e3
+*color1: #dc322f
+*color2: #859900
+*color3: #b58900
+*color4: #268bd2
+*color5: #d33682
+*color6: #2aa198
+*color7: #eee8d5
+*color8: #002b36
+*color9: #cb4b16
+*cursorColor: #93a1a1
+*fadeColor: #002b36
+*foreground: #657b83
 
-! black
- *.color0:       #000000
- *.color8:       #343434
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
 
-! red
- *.color1:       #e92f2f
- *.color9:       #e92f2f
-
-! green
- *.color2:       #0ed839
- *.color10:      #0ed839
-
-! yellow
- *.color3:       #dddd13
- *.color11:      #dddd13
-
-! blue
- *.color4:       #3b48e3
- *.color12:      #3b48e3
-
-! magenta
- *.color5:       #f996e2
- *.color13:      #f996e2
-
-! cyan
- *.color6:       #23edda
- *.color14:      #23edda
-
-! white
- *.color7:       #ababab
- *.color15:      #f9f9f9
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+URxvt.depth:                32
+URxvt.fading:               0
+URxvt.geometry:             90x30
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+URxvt.pointerBlank:         true
+URxvt.transparent:          false
