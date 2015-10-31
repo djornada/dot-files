@@ -1,22 +1,19 @@
 *.font: xft: Cousine for powerline:autohint=true:antialias=true:size=10
 
+urxvt.depth:              32
+
 *.cursorBlink:            true
-*.cursorColor:            #ffffff
 *.cursorUnderline:        false
-*.depth:                  32
 *.fading:                 0
 *.geometry:               90x30
 *.internalBorder:         3
 *.lineSpace:              0
 *.pointerBlank:           true
-*.pointerColorBackground: #586e75
-*.pointerColorForeground: #93a1a1
 *.scrollBar:              false
 *.selectToClipboard:      true
-*.transparent:            false
 
 *.foreground:             #ffffff
-*.background:             #000000
+*.background:             #1d1f21
 *.color0:                 #393939
 *.color8:                 #474747
 *.color1:                 #da4939
@@ -33,3 +30,7 @@
 *.color14:                #6e98a4
 *.color7:                 #c2c2c2
 *.color15:                #c2c2c2
+
+*.pointerColorBackground: #586e75
+*.pointerColorForeground: #93a1a1
+*.cursorColor:            #ffffff
