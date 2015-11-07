@@ -10,8 +10,6 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
-[github]
-	user = djornada
 [alias]
 	st = status
 	co = checkout
