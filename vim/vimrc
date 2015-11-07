@@ -10,6 +10,7 @@ call vundle#begin()
 	Plugin 'honza/vim-snippets'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'mileszs/ack.vim'
+	Plugin 'morhetz/gruvbox'
 	Plugin 'raimondi/delimitmate'
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'scrooloose/syntastic'
@@ -21,7 +22,7 @@ call vundle#begin()
 	Plugin 'w0ng/vim-hybrid'
 call vundle#end()
 
-colo hybrid
+colo gruvbox
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
