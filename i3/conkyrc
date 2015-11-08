@@ -23,7 +23,7 @@ TEXT
 				${if_match ${battery_percent BAT0} > 25}
 					"\uf242"
 				${else}
-					${if_match ${battery_percent BAT0} > 25}
+					${if_match ${battery_percent BAT0} > 10}
 						"\uf243"
 					${else}
 						"\uf244"
