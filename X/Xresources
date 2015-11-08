@@ -1,4 +1,4 @@
-*.font: xft: Cousine for powerline:autohint=true:antialias=true:size=10
+*.font: xft: Hack:autohint=true:antialias=true:size=10
 
 urxvt.depth:              32
 
