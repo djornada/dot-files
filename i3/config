@@ -124,3 +124,5 @@ bar {
         inactive_workspace $gray1 $gray1 #AAAAAA
     }
 }
+
+exec --no-startup-id compton -b
