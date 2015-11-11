@@ -135,4 +135,9 @@ bar {
     }
 }
 
+assign [class="(?i)firefox"]			$ws1
+assign [class="(?i)urxvt"]				$ws2
+assign [class="(?i)thunderbird"]		$ws9
+assign [class="(?i)slack"]				$ws10
+
 exec --no-startup-id compton -b
