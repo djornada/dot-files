@@ -6,7 +6,6 @@ call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
 	Plugin 'bling/vim-airline'
-	Plugin 'evgenyzinoviev/vim-vendetta'
 	Plugin 'honza/vim-snippets'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'mileszs/ack.vim'
@@ -19,7 +18,6 @@ call vundle#begin()
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround'
-	Plugin 'w0ng/vim-hybrid'
 call vundle#end()
 
 colo gruvbox
@@ -50,11 +48,9 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 
 let mapleader = ','
 
-map <leader>b :MBEToggle<cr>
 map <leader>n :NERDTreeToggle<CR>
 map <leader>q :q<cr>
 map <leader>s :sh<cr>
-map <leader>t :TagbarToggle<CR>
 map <leader>w :w!<cr>
 map <space> /
 
