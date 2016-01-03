@@ -119,16 +119,16 @@ bar {
     position top
     status_command ~/.i3/conky
     colors {
-		statusline $primary_text
+	statusline $primary_text
         background $dark_primary
         focused_workspace  $primary $primary $primary_text
         inactive_workspace $dark_primary $dark_primary $secondary_text
     }
 }
 
-assign [class="(?i)firefox"]			$ws1
-assign [class="(?i)urxvt"]				$ws2
-assign [class="(?i)thunderbird"]		$ws9
-assign [class="(?i)slack"]				$ws10
+assign [class="(?i)firefox"]     $ws1
+assign [class="(?i)urxvt"]       $ws2
+assign [class="(?i)thunderbird"] $ws9
+assign [class="(?i)slack"]       $ws10
 
 exec --no-startup-id compton -b
