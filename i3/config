@@ -1,20 +1,20 @@
 focus_follows_mouse no
 font pango:Hack 10
 
-set	$mod Mod4
+set $mod Mod4
 
-set	$dark_primary    #455A64
+set $dark_primary    #455A64
 set $primary         #607D8B
-set	$light_primary   #CFD8DC
+set $light_primary   #CFD8DC
 set $text_icons      #FFFFFF
 set $accent          #03A9F4
 set $primary_text    #212121
 set $secondary_text  #727272
 set $divide          #B6B6B6
 
-client.unfocused        $dark_primary    $dark_primary   $secondary_text $dark_primary
-client.focused_inactive $light_primary   $trd            $secondary_text $light_primary
-client.focused          $light_primary   $light_primary  $primary_text   $light_primary
+client.unfocused        $dark_primary  $dark_primary   $secondary_text $dark_primary
+client.focused_inactive $light_primary $trd            $secondary_text $light_primary
+client.focused          $light_primary $light_primary  $primary_text   $light_primary
 
 floating_modifier $mod
 
