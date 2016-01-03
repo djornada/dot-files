@@ -1,10 +1,7 @@
 focus_follows_mouse no
+font pango:Hack 10
 
 set $mod Mod4
-
-font pango:Hack 10
-for_window [class="^.*"] border pixel 0
-
 set $blue  #000000
 set $gray1 #111111
 set $gray2 #000000
@@ -12,37 +9,24 @@ set $gray2 #000000
 client.unfocused          $gray1   $gray1   #FFFFFF   #333333
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
 client.focused            #000000  #000000  #FFFFFF   #000000
+
 floating_modifier $mod
 
-# start a terminal
 bindsym $mod+Return exec urxvt
 
-# kill focused window
-bindsym $mod+Shift+q kill
+for_window [class="^.*"] border pixel 0
+for_window [title="Library"] floating enable, move absolute center
 
 bindsym $mod+b exec slimlock
-# start dmenu (a program launcher)
-bindsym $mod+d exec "i3-dmenu-desktop"
+bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -width 100 -padding 285 -opacity 80 -bw 5 -bc "#555555" -bg " #607D8B" -hlbg " #607D8B" -hlfg "#1A237E" -fg "#ECEFF1" -font "Hack 15"
 
 # Change focus:
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
-
-# Change focus vi like:
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# move focused window
-#bindsym $mod+Shift+Left move left
-#bindsym $mod+Shift+Down move down
-#bindsym $mod+Shift+Up move up
-#bindsym $mod+Shift+Right move right
-
-# move focused window vi like 
+# move focused window:
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
@@ -81,6 +65,7 @@ set $ws7  "7:  "
 set $ws8  "8:  "
 set $ws9  "9:  "
 set $ws10 "10:  "
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
