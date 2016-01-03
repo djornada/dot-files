@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
-	Plugin 'bling/vim-airline'
 	Plugin 'honza/vim-snippets'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'mileszs/ack.vim'
@@ -20,19 +19,11 @@ call vundle#begin()
 	Plugin 'tpope/vim-surround'
 call vundle#end()
 
-colo gruvbox
 filetype plugin indent on
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
-
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#show_tab_nr = 1
-let g:airline#extensions#tabline#tab_nr_type = 2
-let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -75,7 +66,6 @@ set splitright
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
-set bg=dark
 
 syntax on
 "gvim stuff
