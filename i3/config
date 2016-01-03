@@ -1,14 +1,20 @@
 focus_follows_mouse no
 font pango:Hack 10
 
-set $mod Mod4
-set $blue  #000000
-set $gray1 #111111
-set $gray2 #000000
+set	$mod Mod4
 
-client.unfocused          $gray1   $gray1   #FFFFFF   #333333
-client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
-client.focused            #000000  #000000  #FFFFFF   #000000
+set	$dark_primary    #455A64
+set $primary         #607D8B
+set	$light_primary   #CFD8DC
+set $text_icons      #FFFFFF
+set $accent          #03A9F4
+set $primary_text    #212121
+set $secondary_text  #727272
+set $divide          #B6B6B6
+
+client.unfocused        $dark_primary    $dark_primary   $secondary_text $dark_primary
+client.focused_inactive $light_primary   $trd            $secondary_text $light_primary
+client.focused          $light_primary   $light_primary  $primary_text   $light_primary
 
 floating_modifier $mod
 
@@ -18,7 +24,7 @@ for_window [class="^.*"] border pixel 0
 for_window [title="Library"] floating enable, move absolute center
 
 bindsym $mod+b exec slimlock
-bindsym $mod+d exec rofi -show run -lines 4 -eh 2 -width 100 -padding 285 -opacity 80 -bw 5 -bc "#555555" -bg " #607D8B" -hlbg " #607D8B" -hlfg "#1A237E" -fg "#ECEFF1" -font "Hack 15"
+bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 100 -padding 285 -opacity 80 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$secondary_text" -fg "$primary_text" -font "Hack 15"
 
 # Change focus:
 bindsym $mod+h focus left
@@ -55,16 +61,16 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-set $ws1  "1:  "
-set $ws2  "2:  "
-set $ws3  "3:  "
-set $ws4  "4:  "
-set $ws5  "5:  "
-set $ws6  "6:  "
-set $ws7  "7:  "
-set $ws8  "8:  "
-set $ws9  "9:  "
-set $ws10 "10:  "
+set $ws1  " 1:  "
+set $ws2  " 2:  "
+set $ws3  " 3:  "
+set $ws4  " 4:  "
+set $ws5  " 5:  "
+set $ws6  " 6:  "
+set $ws7  " 7:  "
+set $ws8  " 8:  "
+set $ws9  " 9:  "
+set $ws10 " 10:  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -113,10 +119,10 @@ bar {
     position top
     status_command ~/.i3/conky
     colors {
-        statusline #AAAAAA
-        background #000000
-        focused_workspace $gray2 $gray2 #FFFFFF
-        inactive_workspace $gray1 $gray1 #AAAAAA
+		statusline $primary_text
+        background $dark_primary
+        focused_workspace  $primary $primary $primary_text
+        inactive_workspace $dark_primary $dark_primary $secondary_text
     }
 }
 

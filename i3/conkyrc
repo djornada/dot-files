@@ -10,7 +10,7 @@ override_utf8_locale no
 TEXT
 ,[
 {
-	"full_text": "${if_up wlan0}${addr wlan0} \uf1eb ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%]","color":"\#33CC99${else}${addr eth0}${endif}"
+	"full_text": "${if_up wlan0}${addr wlan0} \uf1eb ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%]${else}${addr eth0}${endif}"
 },
 {
 	"full_text": 
@@ -30,40 +30,13 @@ TEXT
 					${endif}
 				${endif}
 			${endif}
-		${endif},
-
-	"color":
-		${if_match ${battery_percent BAT0} > 75}
-			"\#00FF00"
-		${else}
-			${if_match ${battery_percent BAT0} > 50}
-				"\#0000FF"
-			${else}
-				${if_match ${battery_percent BAT0} > 25}
-					"\#0000FF"
-				${else}
-					${if_match ${battery_percent BAT0} > 25}
-						"\#FFFF00"
-					${else}
-						"\#FF0000"
-					${endif}
-				${endif}
-			${endif}
 		${endif}
 },
 {
-	"full_text": "\uf0e4 ${mem} [${memperc}%]",
-	"color": 
-	${if_match ${memperc}>90}"\#FF0000"
-	${else}
-		${if_match ${memperc}<10}"\#00CC00"
-		${else} "\#ffffff"
-		${endif}
-	${endif} 
+	"full_text": "\uf0e4 ${mem} [${memperc}%]"
 },
 {
-	"full_text": " ${time \uf073 %d/%m/%Y} \uf017${time %H:%M}",
-	"color": ${if_match ${time %u}>5}"\#00CC00"${else}"\#CC0000"${endif}
+	"full_text": " ${time \uf073 %d/%m/%Y} \uf017 ${time %H:%M}"
 }
 ]
 
