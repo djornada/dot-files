@@ -24,7 +24,7 @@ for_window [class="^.*"] border pixel 0
 for_window [title="Library"] floating enable, move absolute center
 
 bindsym $mod+b exec slimlock
-bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 100 -padding 285 -opacity 80 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$secondary_text" -fg "$primary_text" -font "Hack 15"
+bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 100 -padding 285 -opacity 80 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$text_icons" -fg "$primary_text" -font "Hack 15"
 
 # Change focus:
 bindsym $mod+h focus left
