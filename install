@@ -22,6 +22,7 @@ ln -sf $(pwd)/vim/c.vim ~/.vim/ftplugin/c.vim
 ln -sf $(pwd)/vim/javascript.vim ~/.vim/ftplugin/javascript.vim
 ln -sf $(pwd)/vim/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sf $(pwd)/compton.conf ~/.compton.conf
+ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
 
 source ~/.zshrc
 chmod +x i3/conky
