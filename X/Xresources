@@ -1,4 +1,11 @@
 *.font: xft: Hack:autohint=true:antialias=true:size=10
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
 
 urxvt.depth:				32
 
