@@ -8,7 +8,7 @@ ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_AUTOSTART_ONCE=true
 ZSH_TMUX_AUTOSTART=true
 
-plugins=(archlinux debian gem git npm rails rake tmux tmuxinator zsh-syntax-highlighting pip)
+plugins=(archlinux gem git npm rails rake tmux tmuxinator zsh-syntax-highlighting pip bundler)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin:$HOME/.gem/ruby/2.2.0/bin"
@@ -39,3 +39,4 @@ function extract()
 }
 
 zstyle ':completion:*' rehash true
+export PATH=/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin:/home/djornada/.gem/ruby/2.2.0/bin:~/.gem/ruby/2.3.0/bin

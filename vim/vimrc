@@ -12,10 +12,14 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'shougo/neocomplete'
+	Plugin 'keith/rspec.vim'
 	Plugin 'sirver/ultisnips'
+	Plugin 'tpope/vim-haml'
 	Plugin 'tpope/vim-markdown'
+	Plugin 'tpope/vim-rails'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround'
+
 call vundle#end()
 
 filetype plugin indent on
