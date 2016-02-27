@@ -5,40 +5,45 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
+	Plugin 'digitaltoad/vim-pug'
 	Plugin 'honza/vim-snippets'
+	Plugin 'jelera/vim-javascript-syntax'
+	Plugin 'keith/rspec.vim'
 	Plugin 'kien/ctrlp.vim'
 	Plugin 'mileszs/ack.vim'
 	Plugin 'raimondi/delimitmate'
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'scrooloose/syntastic'
-	Plugin 'shougo/neocomplete'
-	Plugin 'keith/rspec.vim'
 	Plugin 'sirver/ultisnips'
 	Plugin 'tpope/vim-haml'
 	Plugin 'tpope/vim-markdown'
 	Plugin 'tpope/vim-rails'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround'
+	Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 
 filetype plugin indent on
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
-
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 2
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_check_on_open=1
+
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
+set completeopt-=preview
+
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
 
 let mapleader = ','
 
@@ -47,6 +52,8 @@ map <leader>q :q<cr>
 map <leader>s :sh<cr>
 map <leader>w :w!<cr>
 map <space> /
+
+map <C-c> <CR><Esc>O
 
 set ai
 set shiftwidth=4
