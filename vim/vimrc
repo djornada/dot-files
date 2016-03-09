@@ -5,14 +5,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 
+	Plugin 'ctrlpvim/ctrlp.vim'
 	Plugin 'digitaltoad/vim-pug'
 	Plugin 'honza/vim-snippets'
 	Plugin 'jelera/vim-javascript-syntax'
 	Plugin 'keith/rspec.vim'
-	Plugin 'kien/ctrlp.vim'
 	Plugin 'mileszs/ack.vim'
 	Plugin 'raimondi/delimitmate'
+	Plugin 'ryanoasis/vim-devicons'
 	Plugin 'scrooloose/nerdcommenter'
+	Plugin 'scrooloose/nerdtree'
 	Plugin 'scrooloose/syntastic'
 	Plugin 'sirver/ultisnips'
 	Plugin 'tpope/vim-haml'
@@ -20,7 +22,6 @@ call vundle#begin()
 	Plugin 'tpope/vim-rails'
 	Plugin 'tpope/vim-repeat'
 	Plugin 'tpope/vim-surround'
-	Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 
@@ -38,8 +39,6 @@ let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
-set completeopt-=preview
 
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
