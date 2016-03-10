@@ -1,29 +1,28 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-	Plugin 'gmarik/Vundle.vim'
+"set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin()
 
-	Plugin 'ctrlpvim/ctrlp.vim'
-	Plugin 'digitaltoad/vim-pug'
-	Plugin 'honza/vim-snippets'
-	Plugin 'jelera/vim-javascript-syntax'
-	Plugin 'keith/rspec.vim'
-	Plugin 'mileszs/ack.vim'
-	Plugin 'raimondi/delimitmate'
-	Plugin 'ryanoasis/vim-devicons'
-	Plugin 'scrooloose/nerdcommenter'
-	Plugin 'scrooloose/nerdtree'
-	Plugin 'scrooloose/syntastic'
-	Plugin 'sirver/ultisnips'
-	Plugin 'tpope/vim-haml'
-	Plugin 'tpope/vim-markdown'
-	Plugin 'tpope/vim-rails'
-	Plugin 'tpope/vim-repeat'
-	Plugin 'tpope/vim-surround'
+	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'digitaltoad/vim-pug', {'for': 'jade'}
+	Plug 'honza/vim-snippets'
+	Plug 'jelera/vim-javascript-syntax', {'for': 'javascript'}
+	Plug 'keith/rspec.vim', {'for': 'ruby'}
+	Plug 'mileszs/ack.vim'
+	Plug 'raimondi/delimitmate'
+	Plug 'ryanoasis/vim-devicons', {'on': 'NERDTreeToggle'}
+	Plug 'scrooloose/nerdcommenter'
+	Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+	Plug 'scrooloose/syntastic'
+	Plug 'sirver/ultisnips'
+	Plug 'tpope/vim-haml'
+	Plug 'tpope/vim-markdown', {'for': 'markdown'}
+	Plug 'tpope/vim-rails'
+	Plug 'tpope/vim-repeat'
+	Plug 'tpope/vim-surround'
 
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 
@@ -43,6 +42,8 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
+
+set completeopt-=preview
 
 let mapleader = ','
 

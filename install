@@ -2,26 +2,33 @@
 
 [ -d ~/.i3 ] || mkdir  ~/.i3
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
-[ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] || git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 
-[ -d ~/.vim/bundle/Vundle.vim ] || git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 [ -d ~/.vim/ftplugin ] || mkdir ~/.vim/ftplugin
 [ -d ~/.vimperator/colors ] || git clone https://github.com/vimpr/vimperator-colors.git ~/.vimperator/colors
+
+[ -f ~/.vim/autoload/plug.vim ] ||  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+									https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -sf $(pwd)/i3/config ~/.i3/config
 ln -sf $(pwd)/i3/conky ~/.i3/conky
 ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
+
 ln -sf $(pwd)/zsh/zshrc ~/.zshrc
 ln -sf $(pwd)/zsh/custom.zsh-theme ~/.oh-my-zsh/themes/custom.zsh-theme
+
 ln -sf $(pwd)/vimperatorrc ~/.vimperatorrc
+
 ln -sf $(pwd)/X/Xresources ~/.Xresources 
 ln -sf $(pwd)/X/xinitrc ~/.xinitrc
+
 ln -sf $(pwd)/gitconfig ~/.gitconfig
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
+
 ln -sf $(pwd)/vim/vimrc ~/.vimrc
 ln -sf $(pwd)/vim/c.vim ~/.vim/ftplugin/c.vim
 ln -sf $(pwd)/vim/javascript.vim ~/.vim/ftplugin/javascript.vim
 ln -sf $(pwd)/vim/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/ruby.vim
+
 ln -sf $(pwd)/compton.conf ~/.compton.conf
 ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
 
