@@ -34,4 +34,4 @@ ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
 
 source ~/.zshrc
 chmod +x i3/conky
-vim +PluginInstall! +PluginClean +qall
+vim +PlugInstall +PlugClean +qall
