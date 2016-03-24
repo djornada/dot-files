@@ -20,46 +20,41 @@ floating_modifier $mod
 
 bindsym $mod+Return exec urxvt
 
-for_window [class="^.*"] border pixel 0
-for_window [title="Library"] floating enable, move absolute center
+new_window pixel 2
+new_float normal
+hide_edge_borders none
 
-bindsym $mod+b exec slimlock
-bindsym $mod+d exec rofi -show run -lines 6 -eh 2 -width 100 -padding 285 -opacity 80 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$text_icons" -fg "$primary_text" -font "Hack 15"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 300 -opacity 85 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$text_icons" -fg "$primary_text" -font "Hack 15"
 
-# Change focus:
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# move focused window:
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# split in horizontal orientation
 bindsym $mod+g split h
 
-# split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
-# change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+t exec --no-startup-id pkill compton
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+
+workspace_auto_back_and_forth yes
+bindsym $mod+b workspace back_and_forth
 
 set $ws1  " 1:  "
 set $ws2  " 2:  "
@@ -100,6 +95,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
+bindsym $mod+r mode "resize"
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
@@ -113,23 +109,43 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+q mode "$mode_system"
+set $mode_system (L)ock, (E)xit, (R)eboot, (Shift+S)hutdown
+mode "$mode_system"{
+	bindsym l exec --no-startup-id i3exit lock, mode "default"
+	bindsym r exec --no-startup-id i3exit reboot, mode "default"
+	bindsym e exec --no-startup-id i3exit logout, mode "default"
+	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+
+}
 
 bar {
+
+	wheel_up_cmd nop
+	wheel_down_cmd nop
+	font pango: FontAwesome 8
+    status_command i3status
     position top
-    status_command ~/.i3/conky
-    colors {
-	statusline $primary_text
-        background $dark_primary
-        focused_workspace  $primary $primary $primary_text
-        inactive_workspace $dark_primary $dark_primary $secondary_text
-    }
+	colors {
+		statusline $primary_text
+		background $dark_primary
+		focused_workspace  $primary $primary $primary_text
+		inactive_workspace $dark_primary $dark_primary $secondary_text
+	}
 }
 
 assign [class="(?i)firefox"]     $ws1
 assign [class="(?i)urxvt"]       $ws2
-assign [class="(?i)thunderbird"] $ws9
-assign [class="(?i)slack"]       $ws10
 
 exec --no-startup-id compton --config ~/.compton.conf -b
 exec --no-startup-id feh --bg-scale ~/.wallpaper
+exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+
+gaps inner 10
+gaps outer -4
+smart_gaps on
+smart_borders on
