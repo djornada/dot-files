@@ -3,24 +3,24 @@ font pango:Hack 10
 
 set $mod Mod4
 
-set $dark_primary    #455A64
-set $primary         #607D8B
-set $light_primary   #CFD8DC
+set $dark_primary    #263238
+set $primary         #546E7A
+set $light_primary   #B0BEC5
 set $text_icons      #FFFFFF
-set $accent          #03A9F4
-set $primary_text    #212121
+set $accent          #00796B
+set $primary_text    #FFFFFF
 set $secondary_text  #727272
 set $divide          #B6B6B6
 
 client.unfocused        $dark_primary  $dark_primary  $secondary_text $dark_primary
 client.focused_inactive $light_primary $light_primary $secondary_text $light_primary
-client.focused          $light_primary $light_primary $primary_text   $light_primary
+client.focused          $accent $light_primary $primary_text   $light_primary
 
 floating_modifier $mod
 
 bindsym $mod+Return exec urxvt
 
-new_window pixel 2
+new_window pixel 5
 new_float normal
 hide_edge_borders none
 
@@ -123,7 +123,6 @@ mode "$mode_system"{
 }
 
 bar {
-
 	wheel_up_cmd nop
 	wheel_down_cmd nop
 	font pango: FontAwesome 8
