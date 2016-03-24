@@ -1,4 +1,4 @@
-*.font: xft: Hack:autohint=true:antialias=true:size=10
+*.font: xft: DejaVu Sans Mono for Powerline:antialias=true:size=8
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -7,14 +7,14 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-urxvt.depth:				32
+urxvt.depth: 32
 
 *.cursorBlink:          true
 *.cursorUnderline:      false
 *.fading:               0
-*.geometry:             90x30
-*.internalBorder:       3
-*.lineSpace:            0
+*.geometry:             240x84
+*.internalBorder:       10
+*.lineSpace:            1
 *.pointerBlank:         true
 *.scrollBar:            false
 *.selectToClipboard:    true
@@ -22,23 +22,23 @@ urxvt.depth:				32
 *.pointerColorBackground: #586e75
 *.pointerColorForeground: #93a1a1
 
-*.foreground:   #b7b8b9
-*.background:   #0c0d0e
-*.cursorColor:  #b7b8b9
+*.cursorColor: #b7b8b9
 
-*.color0:       #0c0d0e
-*.color1:       #e31a1c
-*.color2:       #31a354
-*.color3:       #dca060
-*.color4:       #3182bd
-*.color5:       #756bb1
-*.color6:       #80b1d3
-*.color7:       #b7b8b9
-*.color8:       #737475
-*.color9:       #e31a1c
-*.color10:      #31a354
-*.color11:      #dca060
-*.color12:      #3182bd
-*.color13:      #756bb1
-*.color14:      #80b1d3
-*.color15:      #fcfdfe
+*background: #262626
+*foreground: #d9d9d9
+*color0:     #000000
+*color1:     #b87a7a
+*color2:     #7ab87a
+*color3:     #b8b87a
+*color4:     #7a7ab8
+*color5:     #b87ab8
+*color6:     #7ab8b8
+*color7:     #d9d9d9
+*color8:     #262626
+*color9:     #dbbdbd
+*color10:    #bddbbd
+*color11:    #dbdbbd
+*color12:    #bdbddb
+*color13:    #dbbddb
+*color14:    #bddbdb
+*color15:    #ffffff
