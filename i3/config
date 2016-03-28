@@ -24,7 +24,7 @@ new_window pixel 5
 new_float normal
 hide_edge_borders none
 
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 300 -opacity 85 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$text_icons" -fg "$primary_text" -font "Hack 15"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 300 -opacity 85 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$text_icons" -fg "$dark_primary" -font "Hack 15"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -37,7 +37,6 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 bindsym $mod+g split h
-
 bindsym $mod+v split v
 
 bindsym $mod+f fullscreen
@@ -135,9 +134,6 @@ bar {
 		inactive_workspace $dark_primary $dark_primary $secondary_text
 	}
 }
-
-assign [class="(?i)firefox"]     $ws1
-assign [class="(?i)urxvt"]       $ws2
 
 exec --no-startup-id compton --config ~/.compton.conf -b
 exec --no-startup-id feh --bg-scale ~/.wallpaper
