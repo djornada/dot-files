@@ -1,11 +1,13 @@
 set nocompatible
 filetype off
 
-"set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+"
 call plug#begin()
 
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'digitaltoad/vim-pug', {'for': 'jade'}
+	Plug 'editorconfig/editorconfig-vim'
 	Plug 'honza/vim-snippets'
 	Plug 'jelera/vim-javascript-syntax', {'for': 'javascript'}
 	Plug 'keith/rspec.vim', {'for': 'ruby'}
@@ -16,11 +18,13 @@ call plug#begin()
 	Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 	Plug 'scrooloose/syntastic'
 	Plug 'sirver/ultisnips'
-	Plug 'tpope/vim-haml'
+	Plug 'tpope/vim-haml', {'for': 'haml'}
 	Plug 'tpope/vim-markdown', {'for': 'markdown'}
-	Plug 'tpope/vim-rails'
+	Plug 'tpope/vim-rails', {'for': 'ruby'}
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-surround'
+	Plug 'vim-airline/vim-airline'
+	Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 
 call plug#end()
 
@@ -33,6 +37,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_check_on_open=1
+
+let g:airline_powerline_fonts = 1
 
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
@@ -57,6 +63,7 @@ map <C-c> <CR><Esc>O
 
 set ai
 set shiftwidth=4
+set laststatus=2
 set list
 set listchars=trail:·,eol:↲,tab:»\ 
 set tabstop=4
