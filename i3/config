@@ -19,6 +19,7 @@ client.focused          $accent $light_primary $primary_text   $light_primary
 floating_modifier $mod
 
 bindsym $mod+Return exec urxvt
+bindsym $mod+Escape exec oblogout
 
 new_window pixel 5
 new_float normal
@@ -108,19 +109,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+q mode "$mode_system"
-set $mode_system (L)ock, (E)xit, (R)eboot, (Shift+S)hutdown
-mode "$mode_system"{
-	bindsym l exec --no-startup-id i3exit lock, mode "default"
-	bindsym r exec --no-startup-id i3exit reboot, mode "default"
-	bindsym e exec --no-startup-id i3exit logout, mode "default"
-	bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-
-}
-
 bar {
 	wheel_up_cmd nop
 	wheel_down_cmd nop
@@ -134,6 +122,9 @@ bar {
 		inactive_workspace $dark_primary $dark_primary $secondary_text
 	}
 }
+
+for_window [class="Oblogout"] fullscreen enable
+for_window [title="File Transfer*"] floating enable
 
 exec --no-startup-id compton --config ~/.compton.conf -b
 exec --no-startup-id feh --bg-scale ~/.wallpaper
