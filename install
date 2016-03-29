@@ -1,8 +1,12 @@
 #!/bin/sh
 
 [ -d ~/.i3 ] || mkdir  ~/.i3
-[ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
 [ -d ~/.vim/ftplugin ] || mkdir ~/.vim/ftplugin
+[ -d ~/.config ] || mkdir ~/.config
+[ -d ~/.config/gtk-3.0 ] || mkdir ~/.config/gtk-3.0
+
+
+[ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
 [ -d ~/.vimperator/colors ] || git clone https://github.com/vimpr/vimperator-colors.git ~/.vimperator/colors
 
 [ -f ~/.vim/autoload/plug.vim ] ||  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -15,13 +19,9 @@ ln -sf $(pwd)/i3/conkyrc ~/.i3/conkyrc
 ln -sf $(pwd)/zsh/zshrc ~/.zshrc
 ln -sf $(pwd)/zsh/custom.zsh-theme ~/.oh-my-zsh/themes/custom.zsh-theme
 
-ln -sf $(pwd)/vimperatorrc ~/.vimperatorrc
 
 ln -sf $(pwd)/X/Xresources ~/.Xresources 
 ln -sf $(pwd)/X/xinitrc ~/.xinitrc
-
-ln -sf $(pwd)/gitconfig ~/.gitconfig
-ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 
 ln -sf $(pwd)/vim/vimrc ~/.vimrc
 ln -sf $(pwd)/vim/c.vim ~/.vim/ftplugin/c.vim
@@ -29,9 +29,14 @@ ln -sf $(pwd)/vim/javascript.vim ~/.vim/ftplugin/javascript.vim
 ln -sf $(pwd)/vim/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/ruby.vim
 
-ln -sf $(pwd)/compton.conf ~/.compton.conf
+ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
+ln -sf $(pwd)/config/compton.conf ~/.compton.conf
+ln -sf $(pwd)/config/oblogout.conf ~/.config/oblogout.conf
+ln -sf $(pwd)/config/oblogout.conf ~/.config/oblogout.conf
+ln -sf $(pwd)/config/gitconfig ~/.gitconfig
+ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
+
 ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
 
 source ~/.zshrc
-chmod +x i3/conky
 vim +PlugInstall +PlugClean +qall
