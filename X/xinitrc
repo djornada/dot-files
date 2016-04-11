@@ -1,5 +1,4 @@
 xrdb -merge ~/.Xresources
-feh --randomize --recursive --bg-max ~/.wallpapers
 xset -b
 setxkbmap -model abnt2 -layout br -variant abnt2
 exec $1
