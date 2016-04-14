@@ -22,23 +22,24 @@ urxvt.depth: 32
 *.pointerColorBackground: #586e75
 *.pointerColorForeground: #93a1a1
 
-*.cursorColor: #b7b8b9
+*.foreground:   #eceff1
+*.background:   #263238
 
-*background: #262626
-*foreground: #d9d9d9
-*color0:     #000000
-*color1:     #b87a7a
-*color2:     #7ab87a
-*color3:     #b8b87a
-*color4:     #7a7ab8
-*color5:     #b87ab8
-*color6:     #7ab8b8
-*color7:     #d9d9d9
-*color8:     #bbbbbb
-*color9:     #dbbdbd
-*color10:    #bddbbd
-*color11:    #dbdbbd
-*color12:    #bdbddb
-*color13:    #dbbddb
-*color14:    #bddbdb
-*color15:    #ffffff
+*.cursorColor:  #eceff1
+
+*.color0:       #263238
+*.color1:       #ff9800
+*.color2:       #8bc34a
+*.color3:       #ffc107
+*.color4:       #03a9f4
+*.color5:       #e91e63
+*.color6:       #009688
+*.color7:       #cfd8dc
+*.color8:       #37474f
+*.color9:       #ffa74d
+*.color10:      #9ccc65
+*.color11:      #ffa000
+*.color12:      #81d4fa
+*.color13:      #ad1457
+*.color14:      #26a69a
+*.color15:      #eceff1
