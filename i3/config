@@ -8,7 +8,7 @@ set $primary         #546E7A
 set $light_primary   #B0BEC5
 set $text_icons      #FFFFFF
 set $accent          #00796B
-set $primary_text    #FFFFFF
+set $primary_text    #AD1457
 set $secondary_text  #727272
 set $divide          #B6B6B6
 
@@ -116,14 +116,12 @@ bar {
     status_command i3status
     position top
 	colors {
-		statusline $primary_text
 		background $dark_primary
-		focused_workspace  $primary $primary $primary_text
-		inactive_workspace $dark_primary $dark_primary $secondary_text
+		focused_workspace  $dark_primary $dark_primary #AD1457
+		inactive_workspace $dark_primary $dark_primary #37474F
 	}
 }
 
-for_window [class="Oblogout"] fullscreen enable
 for_window [title="File Transfer*"] floating enable
 
 exec --no-startup-id compton --config ~/.compton.conf -b
