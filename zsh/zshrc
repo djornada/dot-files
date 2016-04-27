@@ -1,16 +1,19 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="custom"
 
-alias zscfg="vim ~/.zshrc"
-alias relzsh="source ~/.zshrc"
-
 plugins=(archlinux gem git npm rails rake tmux tmuxinator zsh-syntax-highlighting pip bundler)
 
-source $ZSH/oh-my-zsh.sh
-export PATH="/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin:$HOME/.gem/ruby/2.2.0/bin"
-export MANPATH="/usr/local/man:$MANPATH"
+NPM_PACKAGES="${HOME}/.npm-packages"
+PATH="$NPM_PACKAGES/bin:$PATH"
+
+export PATH
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export EDITOR="/usr/bin/vim"
 
+source $ZSH/oh-my-zsh.sh
+
+alias zshconfig="vim ~/.zshrc"
+alias relzsh="source ~/.zshrc"
 
 function extract()
 {
@@ -35,4 +38,3 @@ function extract()
 }
 
 zstyle ':completion:*' rehash true
-export PATH=/usr/lib64/ccache:/usr/libexec/lightdm:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/djornada/bin:/home/djornada/.gem/ruby/2.2.0/bin:~/.gem/ruby/2.3.0/bin
