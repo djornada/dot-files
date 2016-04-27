@@ -4,6 +4,7 @@
 [ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
 [ -d ~/.config ] || mkdir ~/.config
 [ -d ~/.config/gtk-3.0 ] || mkdir ~/.config/gtk-3.0
+[ -d ~/.npm-packages ] || mkdir ~/.npm-packages
 
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
@@ -15,10 +16,8 @@
 ln -sf $(pwd)/i3/config ~/.i3/config
 ln -sf $(pwd)/i3/i3status.conf ~/.i3status.conf
 
-
 ln -sf $(pwd)/zsh/zshrc ~/.zshrc
 ln -sf $(pwd)/zsh/custom.zsh-theme ~/.oh-my-zsh/themes/custom.zsh-theme
-
 
 ln -sf $(pwd)/X/Xresources ~/.Xresources 
 ln -sf $(pwd)/X/xinitrc ~/.xinitrc
@@ -36,6 +35,7 @@ ln -sf $(pwd)/config/oblogout.conf ~/.config/oblogout.conf
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/config/gtk-3.0.conf ~/.config/gtk-3.0/settings.ini
+ln -sf $(pwd)/config/npmrc ~/.npmrc
 
 ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
 
