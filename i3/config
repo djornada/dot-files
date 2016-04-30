@@ -25,7 +25,7 @@ new_window pixel 5
 new_float normal
 hide_edge_borders none
 
-bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -width 100 -padding 300 -opacity 85 -bw 5 -bc "$primary" -bg "$primary" -hlbg "$primary" -hlfg "$text_icons" -fg "$dark_primary" -font "Hack 15"
+bindsym $mod+d exec rofi -show run -lines 5 -eh 2 -bw 5 -font "Hack 10"
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
