@@ -13,6 +13,7 @@ call plug#begin()
 	Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
 	Plug 'keith/rspec.vim', {'for': 'ruby'}
 	Plug 'mileszs/ack.vim'
+	Plug 'nlknguyen/papercolor-theme'
 	Plug 'raimondi/delimitmate'
 	Plug 'ryanoasis/vim-devicons', {'on': 'NERDTreeToggle'}
 	Plug 'scrooloose/nerdcommenter'
@@ -83,6 +84,8 @@ set splitright
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
+
+colorscheme PaperColor
 
 syntax on
 "gvim stuff
