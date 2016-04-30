@@ -13,7 +13,7 @@ set $secondary_text  #727272
 set $divide          #B6B6B6
 
 client.unfocused        $dark_primary  $dark_primary  $secondary_text $dark_primary
-client.focused_inactive $light_primary $light_primary $secondary_text $light_primary
+client.focused_inactive $dark_primary  $dark_primary  $secondary_text $dark_primary
 client.focused          $accent $light_primary $primary_text   $light_primary
 
 floating_modifier $mod
