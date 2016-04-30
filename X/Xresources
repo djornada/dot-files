@@ -22,27 +22,25 @@ urxvt.depth: 32
 *.pointerColorBackground: #586e75
 *.pointerColorForeground: #93a1a1
 
-*.foreground:   #eceff1
-*.background:   #263238
-
-*.cursorColor:  #eceff1
-
-*.color0:       #263238
-*.color1:       #ff9800
-*.color2:       #8bc34a
-*.color3:       #ffc107
-*.color4:       #03a9f4
-*.color5:       #e91e63
-*.color6:       #009688
-*.color7:       #cfd8dc
-*.color8:       #37474f
-*.color9:       #ffa74d
-*.color10:      #9ccc65
-*.color11:      #ffa000
-*.color12:      #81d4fa
-*.color13:      #ad1457
-*.color14:      #26a69a
-*.color15:      #eceff1
+*.foreground:   #b9b9b9
+*.background:   #101010
+*.cursorColor:  #b9b9b9
+*.color0:       #101010
+*.color8:       #525252
+*.color1:       #7c7c7c
+*.color9:       #7c7c7c
+*.color2:       #8e8e8e
+*.color10:      #8e8e8e
+*.color3:       #a0a0a0
+*.color11:      #a0a0a0
+*.color4:       #686868
+*.color12:      #686868
+*.color5:       #747474
+*.color13:      #747474
+*.color6:       #868686
+*.color14:      #868686
+*.color7:       #b9b9b9
+*.color15:      #f7f7f7
 
 rofi.color-enabled: true
 rofi.color-window: #273238, #273238, #1e2529
