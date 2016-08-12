@@ -1,21 +1,15 @@
-set nocompatible
-filetype off
-
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-"
 call plug#begin()
 
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'digitaltoad/vim-pug', {'for': 'jade'}
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'honza/vim-snippets'
-	Plug 'jelera/vim-javascript-syntax', {'for': 'javascript'}
 	Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
 	Plug 'keith/rspec.vim', {'for': 'ruby'}
 	Plug 'mileszs/ack.vim'
 	Plug 'nlknguyen/papercolor-theme'
+	Plug 'othree/yajs.vim', {'for': 'javascript'}
 	Plug 'raimondi/delimitmate'
-	Plug 'ryanoasis/vim-devicons', {'on': 'NERDTreeToggle'}
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 	Plug 'scrooloose/syntastic'
@@ -29,8 +23,6 @@ call plug#begin()
 
 call plug#end()
 
-filetype plugin indent on
-
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
 
@@ -41,16 +33,9 @@ let g:syntastic_check_on_open=1
 
 let g:airline_powerline_fonts = 1
 
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
-
-set completeopt-=preview
 
 let mapleader = ','
 
