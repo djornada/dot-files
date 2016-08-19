@@ -22,28 +22,48 @@ urxvt.depth: 32
 *.pointerColorBackground: #586e75
 *.pointerColorForeground: #93a1a1
 
-*.foreground:   #b9b9b9
-*.background:   #101010
-*.cursorColor:  #b9b9b9
-*.color0:       #101010
-*.color8:       #525252
-*.color1:       #7c7c7c
-*.color9:       #7c7c7c
-*.color2:       #8e8e8e
-*.color10:      #8e8e8e
-*.color3:       #a0a0a0
-*.color11:      #a0a0a0
-*.color4:       #686868
-*.color12:      #686868
-*.color5:       #747474
-*.color13:      #747474
-*.color6:       #868686
-*.color14:      #868686
-*.color7:       #b9b9b9
-*.color15:      #f7f7f7
+#define base00 #1f2022
+#define base01 #282828
+#define base02 #444155
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #a3a3a3
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #f2241f
+#define base09 #ffa500
+#define base0A #b1951d
+#define base0B #67b11d
+#define base0C #2d9574
+#define base0D #4f97d7
+#define base0E #a31db1
+#define base0F #b03060
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
+
 
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+rofi.color-window: base00, base00, base00
+rofi.color-normal: base00, #c1c1c1, base00, base05, #ffffff
+rofi.color-active: base00, #80cbc4, base00, base05, #80cbc4
+rofi.color-urgent: base00, #ff1844, base00, base05, #ff1844
