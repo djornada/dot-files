@@ -3,23 +3,13 @@ font pango:Hack 10
 
 set $mod Mod4
 
-set $dark_primary    #263238
-set $primary         #546E7A
-set $light_primary   #B0BEC5
-set $text_icons      #FFFFFF
-set $accent          #00796B
-set $primary_text    #AD1457
-set $secondary_text  #727272
-set $divide          #B6B6B6
-
-client.unfocused        $dark_primary  $dark_primary  $secondary_text $dark_primary
-client.focused_inactive $dark_primary  $dark_primary  $secondary_text $dark_primary
-client.focused          $accent $light_primary $primary_text   $light_primary
+client.unfocused        #383838  #383838  #D8D8D8 #383838
+client.focused_inactive #383838  #383838  #D8D8D8 #383838
+client.focused          #585858  #585858  #86C1B9 #86C1B9
 
 floating_modifier $mod
 
 bindsym $mod+Return exec urxvt
-bindsym $mod+Escape exec oblogout
 
 new_window pixel 5
 new_float normal
@@ -116,9 +106,9 @@ bar {
     status_command i3status
     position top
 	colors {
-		background $dark_primary
-		focused_workspace  $dark_primary $dark_primary #AD1457
-		inactive_workspace $dark_primary $dark_primary #37474F
+		background #383838
+		focused_workspace  #383838 #383838 #86C1B9
+		inactive_workspace #383838 #383838 #37474F
 	}
 }
 
