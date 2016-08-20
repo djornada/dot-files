@@ -19,16 +19,15 @@ call plug#begin()
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-surround'
 	Plug 'vim-airline/vim-airline'
+	Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
+let base16colorspace=256
+colo base16-spacemacs
+
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
-
-if filereadable(expand("~/.vimrc_background"))
-	let base16colorspace=256
-	source ~/.vimrc_background
-endif
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
