@@ -7,7 +7,6 @@ call plug#begin()
 	Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
 	Plug 'keith/rspec.vim', {'for': 'ruby'}
 	Plug 'mileszs/ack.vim'
-	Plug 'nlknguyen/papercolor-theme'
 	Plug 'othree/yajs.vim', {'for': 'javascript'}
 	Plug 'raimondi/delimitmate'
 	Plug 'scrooloose/nerdcommenter'
@@ -25,6 +24,11 @@ call plug#end()
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
+
+if filereadable(expand("~/.vimrc_background"))
+	let base16colorspace=256
+	source ~/.vimrc_background
+endif
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
@@ -70,9 +74,8 @@ set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
 
-colorscheme PaperColor
-
 syntax on
+
 "gvim stuff
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove tool bar
