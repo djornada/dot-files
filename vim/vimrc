@@ -12,7 +12,6 @@ call plug#begin()
 	Plug 'scrooloose/nerdcommenter'
 	Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 	Plug 'scrooloose/syntastic'
-	Plug 'sirver/ultisnips'
 	Plug 'tpope/vim-haml', {'for': 'haml'}
 	Plug 'tpope/vim-markdown', {'for': 'markdown'}
 	Plug 'tpope/vim-rails', {'for': 'ruby'}
@@ -20,6 +19,8 @@ call plug#begin()
 	Plug 'tpope/vim-surround'
 	Plug 'vim-airline/vim-airline'
 	Plug 'chriskempson/base16-vim'
+	Plug 'shougo/neocomplete'
+	Plug 'shougo/neosnippet'
 
 call plug#end()
 
@@ -29,24 +30,34 @@ colo base16-spacemacs
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
 
-let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_signs = 1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open = 1
+
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+let g:neocomplete#disable_runtime_snippet = 1
+let g:neosnippet#snippets_directory='~/vimfiles/plugged/vim-snippets/snippets'
 
 let g:airline_powerline_fonts = 1
-
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
+let g:airline#extensions#tabline#enabled = 1
 
 let mapleader = ','
 
 map <leader>n :NERDTreeToggle<CR>
 map <leader>q :q<cr>
-map <leader>s :sh<cr>
 map <leader>w :w!<cr>
 map <space> /
+
+imap <TAB>     <Plug>(neosnippet_expand_or_jump)
+smap <TAB>     <Plug>(neosnippet_expand_or_jump)
+xmap <TAB>     <Plug>(neosnippet_expand_or_jump)
 
 map <C-c> <CR><Esc>O
 
@@ -60,7 +71,6 @@ set shiftround
 set nosmartindent
 set noexpandtab
 
-set clipboard=unnamedplus
 set ignorecase
 set incsearch
 set magic
@@ -72,6 +82,10 @@ set splitright
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
+
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 syntax on
 
