@@ -1,4 +1,4 @@
-*.font: xft: DejaVu Sans Mono for Powerline:antialias=true:size=8
+*.font: xft: DejaVu Sans Mono for Powerline:antialias=true:size=9
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
