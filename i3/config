@@ -102,7 +102,7 @@ mode "resize" {
 bar {
 	wheel_up_cmd nop
 	wheel_down_cmd nop
-	font pango: FontAwesome 8
+	font pango: FontAwesome 9
     status_command i3status
     position top
 	colors {
