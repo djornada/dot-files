@@ -40,8 +40,6 @@ bindsym $mod+Shift+space floating toggle
 
 bindsym $mod+space focus mode_toggle
 
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 
 workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
@@ -114,7 +112,6 @@ bar {
 
 for_window [title="File Transfer*"] floating enable
 
-exec --no-startup-id compton --config ~/.compton.conf -b
 exec --no-startup-id feh --bg-scale ~/.wallpaper
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon

@@ -31,9 +31,6 @@ ln -sf $(pwd)/vim/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/ruby.vim
 
 ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
-ln -sf $(pwd)/config/compton.conf ~/.compton.conf
-ln -sf $(pwd)/config/oblogout.conf ~/.config/oblogout.conf
-ln -sf $(pwd)/config/oblogout.conf ~/.config/oblogout.conf
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/config/gtk-3.0.conf ~/.config/gtk-3.0/settings.ini
@@ -42,7 +39,6 @@ ln -sf $(pwd)/config/npmrc ~/.npmrc
 ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
 
 source ~/.zshrc
-base16_spacemacs
 vim +PlugInstall +PlugClean +qall
 
 
