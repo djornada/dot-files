@@ -100,13 +100,15 @@ mode "resize" {
 bar {
 	wheel_up_cmd nop
 	wheel_down_cmd nop
-	font pango: FontAwesome 9
+	font pango: Hack, Awesome 9
     status_command i3status
     position top
 	colors {
 		background #383838
+		statusline #AD1457
 		focused_workspace  #383838 #383838 #86C1B9
 		inactive_workspace #383838 #383838 #37474F
+		active_workspace   #383838 #383838 #86C1B9
 	}
 }
 
