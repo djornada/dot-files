@@ -32,6 +32,7 @@ ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/ruby.vim
 
 ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
+ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/config/gtk-3.0.conf ~/.config/gtk-3.0/settings.ini
 ln -sf $(pwd)/config/npmrc ~/.npmrc
