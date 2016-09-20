@@ -37,7 +37,7 @@ ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/config/gtk-3.0.conf ~/.config/gtk-3.0/settings.ini
 ln -sf $(pwd)/config/npmrc ~/.npmrc
 
-ln -sf $(pwd)/wallpaper.jpg ~/.wallpaper
+ln -sf $(pwd)/wallpaper.png ~/.wallpaper
 
 source ~/.zshrc
 vim +PlugInstall +PlugClean +qall
