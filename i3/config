@@ -9,7 +9,7 @@ client.focused          #585858  #585858  #86C1B9 #86C1B9
 
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec termite
 
 new_window pixel 5
 new_float normal
@@ -44,12 +44,12 @@ bindsym $mod+space focus mode_toggle
 workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
 
-set $ws1  " 1:  "
+set $ws1  " 1:  "
 set $ws2  " 2:  "
 set $ws3  " 3:  "
 set $ws4  " 4:  "
 set $ws5  " 5:  "
-set $ws6  " 6:  "
+set $ws6  " 6:  "
 set $ws7  " 7:  "
 set $ws8  " 8:  "
 set $ws9  " 9:  "
@@ -105,7 +105,7 @@ bar {
     position top
 	colors {
 		background #383838
-		statusline #AD1457
+		statusline #86C1B9
 		focused_workspace  #383838 #383838 #86C1B9
 		inactive_workspace #383838 #383838 #37474F
 		active_workspace   #383838 #383838 #86C1B9
