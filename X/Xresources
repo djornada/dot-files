@@ -1,4 +1,5 @@
-*.font: xft: DejaVu Sans Mono for Powerline:antialias=true:size=9
+*.font: xft:Hack:size=9:hinting=True;antialias:True,xft:PowerlineSymbols,xft:Awesome:size=11
+
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -12,9 +13,8 @@ urxvt.depth: 32
 *.cursorBlink:          true
 *.cursorUnderline:      false
 *.fading:               0
-*.geometry:             240x84
-*.internalBorder:       10
 *.lineSpace:            1
+*.letterSpace:          0
 *.pointerBlank:         true
 *.scrollBar:            false
 *.selectToClipboard:    true
