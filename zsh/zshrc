@@ -1,20 +1,15 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="custom"
 
-plugins=(archlinux gem git npm rails rake tmux tmuxinator zsh-syntax-highlighting pip bundler zsh-wakatime)
+plugins=(archlinux git zsh-wakatime)
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 
-alias -s pdf='background nohup zathura'
 export PATH
-#export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 export EDITOR="/usr/bin/vim"
 
 source $ZSH/oh-my-zsh.sh
-
-alias zshconfig="vim ~/.zshrc"
-alias relzsh="source ~/.zshrc"
 
 function extract()
 {
@@ -37,9 +32,6 @@ function extract()
 		echo "'$1' is not a valid file!"
 	fi
 }
-function background() {
-	"$@" &
-}
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
@@ -47,4 +39,4 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 zstyle ':completion:*' rehash true
 
-export PATH=/home/djornada/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/djornada/.gem/ruby/2.3.0/bin
+export PATH=~/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
