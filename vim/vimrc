@@ -3,7 +3,6 @@ call plug#begin()
     Plug 'chriskempson/base16-vim'
     Plug 'ctrlpvim/ctrlp.vim'
     Plug 'digitaltoad/vim-pug', {'for': 'jade'}
-    Plug 'digitaltoad/vim-pug', {'for': 'jade'}
     Plug 'editorconfig/editorconfig-vim'
     Plug 'honza/vim-snippets'
     Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
@@ -40,7 +39,6 @@ autocmd BufNewFile,BufReadPost *.tex set filetype=tex
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_check_on_open = 1
 
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
@@ -56,19 +54,19 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 let mapleader = ','
+let g:ackprg = 'ag --vimgrep'
 
-map <leader>n :NERDTreeToggle<CR>
-map <leader>q :q<cr>
-map <leader>w :w!<cr>
-map <space> /
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>t :TagbarToggle<CR>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>w :w!<cr>
+nnoremap <space> /
 
 xmap <TAB>     <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+\ "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 
 set ai
@@ -89,7 +87,6 @@ set ruler
 set smartcase
 set splitbelow
 set splitright
-set t_Co=256
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
