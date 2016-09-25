@@ -1,29 +1,33 @@
 call plug#begin()
 
-	Plug 'chriskempson/base16-vim'
-	Plug 'ctrlpvim/ctrlp.vim'
-	Plug 'digitaltoad/vim-pug', {'for': 'jade'}
-	Plug 'digitaltoad/vim-pug', {'for': 'jade'}
-	Plug 'editorconfig/editorconfig-vim'
-	Plug 'honza/vim-snippets'
-	Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
-	Plug 'keith/rspec.vim', {'for': 'ruby'}
-	Plug 'mileszs/ack.vim'
-	Plug 'othree/yajs.vim', {'for': 'javascript'}
-	Plug 'raimondi/delimitmate'
-	Plug 'scrooloose/nerdcommenter'
-	Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-	Plug 'scrooloose/syntastic'
-	Plug 'shougo/neocomplete'
-	Plug 'shougo/neosnippet'
-	Plug 'tpope/vim-haml', {'for': 'haml'}
-	Plug 'tpope/vim-markdown', {'for': 'markdown'}
-	Plug 'tpope/vim-rails', {'for': 'ruby'}
-	Plug 'tpope/vim-repeat'
-	Plug 'tpope/vim-surround'
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'wakatime/vim-wakatime'
+    Plug 'chriskempson/base16-vim'
+    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'digitaltoad/vim-pug', {'for': 'jade'}
+    Plug 'digitaltoad/vim-pug', {'for': 'jade'}
+    Plug 'editorconfig/editorconfig-vim'
+    Plug 'honza/vim-snippets'
+    Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
+    Plug 'keith/rspec.vim', {'for': 'ruby'}
+    Plug 'majutsushi/tagbar'
+    Plug 'mhinz/vim-signify'
+    Plug 'mileszs/ack.vim'
+    Plug 'othree/yajs.vim', {'for': 'javascript'}
+    Plug 'raimondi/delimitmate'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+    Plug 'scrooloose/syntastic'
+    Plug 'shougo/neocomplete'
+    Plug 'shougo/neosnippet'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-haml', {'for': 'haml'}
+    Plug 'tpope/vim-markdown', {'for': 'markdown'}
+    Plug 'tpope/vim-rails', {'for': 'ruby'}
+    Plug 'tpope/vim-repeat'
+    Plug 'tpope/vim-surround'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'wakatime/vim-wakatime'
 
 call plug#end()
 
@@ -67,13 +71,11 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \: "\<TAB>"
 
 
-map <C-c> <CR><Esc>O
-
 set ai
 set shiftwidth=4
 set laststatus=2
 set list
-set listchars=trail:·,eol:↲,tab:»\ 
+set listchars=trail:·,tab:»\ ,eol:↲
 set tabstop=4
 set shiftround
 set nosmartindent
@@ -87,6 +89,7 @@ set ruler
 set smartcase
 set splitbelow
 set splitright
+set t_Co=256
 set wildignore=*.o,*.obj,*~
 set wildmenu
 set ls=2
