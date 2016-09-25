@@ -1,4 +1,4 @@
-*.font: xft:Hack:size=9:hinting=True;antialias:True,xft:PowerlineSymbols,xft:Awesome:size=11
+*.font: xft:Hack:size=11:hinting=True;antialias:True, xft:PowerlineSymbols:size=11, xft:Awesome:size=11
 
 Xft.dpi: 96
 Xft.antialias: true
