@@ -104,17 +104,16 @@ bar {
     status_command i3status
     position top
 	colors {
-		background #383838
+		background #141414
 		statusline #86C1B9
-		focused_workspace  #383838 #383838 #86C1B9
-		inactive_workspace #383838 #383838 #37474F
-		active_workspace   #383838 #383838 #86C1B9
+		focused_workspace  #141414 #141414 #86C1B9
+		inactive_workspace #141414 #141414 #37474F
+		active_workspace   #141414 #141414 #86C1B9
 	}
 }
 
 for_window [title="File Transfer*"] floating enable
 
-exec --no-startup-id feh --bg-scale ~/.wallpaper
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 
