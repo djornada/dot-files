@@ -114,6 +114,7 @@ bar {
 
 for_window [title="File Transfer*"] floating enable
 
+exec --no-startup-id feh --bg-scale ~/.wallpaper 
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 
