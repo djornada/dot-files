@@ -6,7 +6,6 @@ plugins=(archlinux git zsh-wakatime)
 NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
 
-export PATH
 export EDITOR="/usr/bin/vim"
 
 source $ZSH/oh-my-zsh.sh
@@ -38,5 +37,3 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 
 zstyle ':completion:*' rehash true
-
-export PATH=~/.npm-packages/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
