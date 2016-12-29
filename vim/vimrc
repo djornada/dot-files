@@ -1,37 +1,35 @@
 call plug#begin()
 
-    Plug 'chriskempson/base16-vim'
-    Plug 'ctrlpvim/ctrlp.vim'
-    Plug 'digitaltoad/vim-pug', {'for': 'jade'}
-    Plug 'editorconfig/editorconfig-vim'
-    Plug 'honza/vim-snippets'
-    Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
-    Plug 'keith/rspec.vim', {'for': 'ruby'}
-    Plug 'majutsushi/tagbar'
-    Plug 'mhinz/vim-signify'
-    Plug 'mileszs/ack.vim'
-    Plug 'othree/yajs.vim', {'for': 'javascript'}
-    Plug 'raimondi/delimitmate'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'scrooloose/nerdcommenter'
-    Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-    Plug 'scrooloose/syntastic'
-    Plug 'shougo/neocomplete'
-    Plug 'shougo/neosnippet'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-haml', {'for': 'haml'}
-    Plug 'tpope/vim-markdown', {'for': 'markdown'}
-    Plug 'tpope/vim-rails', {'for': 'ruby'}
-    Plug 'tpope/vim-repeat'
-    Plug 'tpope/vim-surround'
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'wakatime/vim-wakatime'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'digitaltoad/vim-pug', {'for': 'jade'}
+Plug 'editorconfig/editorconfig-vim'
+Plug 'honza/vim-snippets'
+Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
+Plug 'keith/rspec.vim', {'for': 'ruby'}
+Plug 'lervag/vimtex'
+Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-signify'
+Plug 'mileszs/ack.vim'
+Plug 'othree/yajs.vim', {'for': 'javascript'}
+Plug 'raimondi/delimitmate'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'scrooloose/syntastic'
+Plug 'shougo/neocomplete'
+Plug 'shougo/neosnippet'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-haml', {'for': 'haml'}
+Plug 'tpope/vim-markdown', {'for': 'markdown'}
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'wakatime/vim-wakatime'
+Plug 'whatyouhide/vim-gotham'
 
 call plug#end()
-
-let base16colorspace=256
-colo base16-spacemacs
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
@@ -47,11 +45,11 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
-let g:neosnippet#disable_runtime_snippet = 1
+let g:neosnippet#disable_runtime_snippets = {'_': 1}
 let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts=1
+"let g:airline#extensions#tabline#enabled = 1
 
 let mapleader = ','
 let g:ackprg = 'ag --vimgrep'
@@ -64,35 +62,36 @@ nnoremap <space> /
 
 xmap <TAB>     <Plug>(neosnippet_expand_or_jump)
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
+colorscheme gotham
 
 set ai
-set shiftwidth=4
+set cursorline
+set ignorecase
+set incsearch
 set laststatus=2
 set list
 set listchars=trail:·,tab:»\ ,eol:↲
-set tabstop=4
-set shiftround
-set nosmartindent
-set noexpandtab
-
-set ignorecase
-set incsearch
+set ls=2
 set magic
+set noexpandtab
+set nosmartindent
 set number
 set ruler
+set shiftround
+set shiftwidth=4
 set smartcase
 set splitbelow
 set splitright
+set tabstop=4
 set wildignore=*.o,*.obj,*~
 set wildmenu
-set ls=2
 
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+	set conceallevel=2 concealcursor=niv
 endif
 
 syntax on

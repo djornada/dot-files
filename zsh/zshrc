@@ -4,7 +4,16 @@ ZSH_THEME="custom"
 plugins=(archlinux git zsh-wakatime)
 
 NPM_PACKAGES="${HOME}/.npm-packages"
-PATH="$NPM_PACKAGES/bin:$PATH"
+PIP_PACKAGES="${HOME}/.local"
+PATH="$NPM_PACKAGES/bin:$PIP_PACKAGES/bin:$PATH"
+
+if [ -d $HOME/.gem ] ; then
+	for dir in $HOME/.gem/ruby/*; do
+		[ -d "$dir/bin" ] && PATH="${dir}/bin:${PATH}"
+	done
+fi
+
+export PATH
 
 export EDITOR="/usr/bin/vim"
 
@@ -31,9 +40,5 @@ function extract()
 		echo "'$1' is not a valid file!"
 	fi
 }
-
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
 
 zstyle ':completion:*' rehash true
