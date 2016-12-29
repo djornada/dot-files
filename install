@@ -34,9 +34,10 @@ ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
-ln -sf $(pwd)/config/gtk-3.0.conf ~/.config/gtk-3.0/settings.ini
+ln -sf $(pwd)/config/gtk-3.0 ~/.config/gtk-3.0/settings.ini
 ln -sf $(pwd)/config/termite ~/.config/termite/config
 ln -sf $(pwd)/config/npmrc ~/.npmrc
+ln -sf $(pwd)/config/compton ~/.config/compton.conf
 
 source ~/.zshrc
 vim +PlugInstall +PlugClean +qall
