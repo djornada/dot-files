@@ -11,11 +11,11 @@ floating_modifier $mod
 
 bindsym $mod+Return exec termite
 
-new_window pixel 5
+new_window pixel 1
 new_float normal
 hide_edge_borders none
 
-bindsym $mod+d exec rofi -location 2 -yoffset 22 -show run -lines 5 -eh 2 -bw 5 -font "Hack 10"
+bindsym $mod+d exec rofi -show run -eh 2
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -37,9 +37,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
-
 bindsym $mod+space focus mode_toggle
-
 
 workspace_auto_back_and_forth yes
 bindsym $mod+b workspace back_and_forth
@@ -101,20 +99,17 @@ bar {
 	wheel_up_cmd nop
 	wheel_down_cmd nop
 	font pango: Hack, Awesome 9
-    status_command i3status
-    position top
+	status_command i3status
+	position top
 	colors {
-		background #141414
-		statusline #86C1B9
-		focused_workspace  #141414 #141414 #86C1B9
-		inactive_workspace #141414 #141414 #37474F
-		active_workspace   #141414 #141414 #86C1B9
+		background #0A0F14
+		statusline #98D1CE
+		focused_workspace  #0A0F14 #0A0F14 #98D1CE
+		inactive_workspace #0A0F14 #0A0F14 #37474F
+		active_workspace   #0A0F14 #0A0F14 #37474F
 	}
 }
 
-for_window [title="File Transfer*"] floating enable
-
-# exec --no-startup-id feh --bg-scale ~/.wallpaper 
 exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 

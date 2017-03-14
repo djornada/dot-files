@@ -3,10 +3,10 @@ map <Leader>d :downloads<CR>
 map <Leader>q :tabclose!<CR>
 map <Leader>a :addons<CR>
 
-nnoremap j 3j
-nnoremap k 3k
-nnoremap h gT
-nnoremap l gt
+map j 3<C-e>
+map k 3<C-y>
+map H gT
+map L gt
 
 set runtimepath=~/.vimperator
 set titlestring="Mozilla Firefox"
@@ -14,15 +14,13 @@ set messages=100
 set verbose=1
 set gui=none
 set gui=tabs
-set complete=sh
+set complete=l
 set history=1000
-set newtab=all
-set popups=tab
 set nohlsearch
 set ignorecase
 set incsearch
 set smartcase
 set nofocuscontent
 set visualbell
-set defsearch=duckduckgo
+set defsearch=google
 colorscheme darkness

@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug', {'for': 'jade'}
 Plug 'editorconfig/editorconfig-vim'
+Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'honza/vim-snippets'
 Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
 Plug 'keith/rspec.vim', {'for': 'ruby'}
@@ -10,6 +11,7 @@ Plug 'lervag/vimtex'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'raimondi/delimitmate'
 Plug 'ryanoasis/vim-devicons'
@@ -34,6 +36,7 @@ call plug#end()
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.tex set filetype=tex
 
+let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
@@ -87,7 +90,7 @@ set smartcase
 set splitbelow
 set splitright
 set tabstop=4
-set wildignore=*.o,*.obj,*~
+set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
 
 if has('conceal')
