@@ -29,6 +29,7 @@ ln -sf $(pwd)/vim/c.vim ~/.vim/ftplugin/c.vim
 ln -sf $(pwd)/vim/javascript.vim ~/.vim/ftplugin/javascript.vim
 ln -sf $(pwd)/vim/tex.vim ~/.vim/ftplugin/tex.vim
 ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/ruby.vim
+ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/json.vim
 
 ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
