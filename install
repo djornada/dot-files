@@ -6,6 +6,7 @@
 [ -d ~/.config/gtk-3.0 ] || mkdir ~/.config/gtk-3.0
 [ -d ~/.config/termite ] || mkdir ~/.config/termite
 [ -d ~/.npm-packages ] || mkdir ~/.npm-packages
+[ -d ~/.config/xfce4/terminal ] && cp ./config/xfce4-temrinal ~/.config/xfce4/terminal/temrinalrc
 
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
