@@ -16,7 +16,7 @@ Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'raimondi/delimitmate'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'shougo/neocomplete'
 Plug 'shougo/neosnippet'
 Plug 'tpope/vim-fugitive'
@@ -37,8 +37,8 @@ autocmd BufNewFile,BufReadPost *.tex set filetype=tex
 
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
 
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
