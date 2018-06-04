@@ -33,12 +33,16 @@ Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd BufNewFile,BufReadPost *.tex set filetype=tex
+autocmd bufwritepost *.js silent !standard --fix %
 
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
+
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
 
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
@@ -51,7 +55,6 @@ let g:neosnippet#disable_runtime_snippets = {'_': 1}
 let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
 
 let g:airline_powerline_fonts=1
-"let g:airline#extensions#tabline#enabled = 1
 
 let mapleader = ','
 let g:ackprg = 'ag --vimgrep'
@@ -71,6 +74,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 colorscheme gotham
 
 set ai
+set autoread
 set cursorline
 set ignorecase
 set incsearch
