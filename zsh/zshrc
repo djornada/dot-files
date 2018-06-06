@@ -5,6 +5,7 @@ plugins=(archlinux git zsh-wakatime npm)
 
 NPM_PACKAGES="${HOME}/.npm-packages"
 PIP_PACKAGES="${HOME}/.local"
+
 PATH="$NPM_PACKAGES/bin:$PIP_PACKAGES/bin:$PATH"
 
 if [ -d $HOME/.gem ] ; then
@@ -18,6 +19,8 @@ export PATH
 export EDITOR="/usr/bin/vim"
 
 source $ZSH/oh-my-zsh.sh
+
+alias cat=bat
 
 function extract()
 {
