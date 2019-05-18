@@ -25,7 +25,7 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
-Plug 'ryanolsonx/vim-lsp-javascript'
+Plug 'ryanolsonx/vim-lsp-javascript', {'for': 'javascript'}
 
 call plug#end()
 
