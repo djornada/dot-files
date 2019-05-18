@@ -1,58 +1,46 @@
 call plug#begin()
 
+Plug 'ashfinal/vim-colors-paper'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'digitaltoad/vim-pug', {'for': 'jade'}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'elzr/vim-json', {'for': 'json'}
-Plug 'honza/vim-snippets'
 Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
-Plug 'keith/rspec.vim', {'for': 'ruby'}
-Plug 'lervag/vimtex'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-signify'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'raimondi/delimitmate'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'w0rp/ale'
-Plug 'shougo/neocomplete'
-Plug 'shougo/neosnippet'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-haml', {'for': 'haml'}
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
-Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
-Plug 'whatyouhide/vim-gotham'
+
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+Plug 'ryanolsonx/vim-lsp-javascript'
 
 call plug#end()
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd bufwritepost *.js silent !standard --fix %
 
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
 
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
-let g:ale_linters = {
-\   'javascript': ['standard'],
-\}
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0
 
 let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-let g:neosnippet#disable_runtime_snippets = {'_': 1}
-let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
 
 let g:airline_powerline_fonts=1
 
@@ -63,18 +51,15 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w!<cr>
+nnoremap <leader>w :w!<cr>
+nnoremap <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <space> /
 
-xmap <TAB>     <Plug>(neosnippet_expand_or_jump)
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-colorscheme gotham
+colorscheme paper
 
 set ai
 set autoread
+set background=dark
 set cursorline
 set ignorecase
 set incsearch
@@ -102,7 +87,6 @@ endif
 
 syntax on
 
-"gvim stuff
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove tool bar
 set guioptions-=r "remove right hand scroll bar
