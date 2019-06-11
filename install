@@ -1,45 +1,26 @@
 #!/bin/sh
 
-[ -d ~/.i3 ] || mkdir  ~/.i3
 [ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
 [ -d ~/.config ] || mkdir ~/.config
-[ -d ~/.config/gtk-3.0 ] || mkdir ~/.config/gtk-3.0
 [ -d ~/.config/termite ] || mkdir ~/.config/termite
-[ -d ~/.npm-packages ] || mkdir ~/.npm-packages
-[ -d ~/.config/xfce4/terminal ] && cp ./config/xfce4-temrinal ~/.config/xfce4/terminal/temrinalrc
-
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
-[ -d ~/.vimperator/colors ] || git clone https://github.com/vimpr/vimperator-colors.git ~/.vimperator/colors
-
 [ -f ~/.vim/autoload/plug.vim ] ||  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 									https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-ln -sf $(pwd)/i3/config ~/.i3/config
-ln -sf $(pwd)/i3/i3status.conf ~/.i3status.conf
 
 ln -sf $(pwd)/zsh/zshrc ~/.zshrc
 ln -sf $(pwd)/zsh/custom.zsh-theme ~/.oh-my-zsh/themes/custom.zsh-theme
 
-ln -sf $(pwd)/X/Xresources ~/.Xresources 
-ln -sf $(pwd)/X/xinitrc ~/.xinitrc
-
 ln -sf $(pwd)/vim/vimrc ~/.vimrc
 
-ln -sf $(pwd)/vim/c.vim ~/.vim/ftplugin/c.vim
 ln -sf $(pwd)/vim/javascript.vim ~/.vim/ftplugin/javascript.vim
-ln -sf $(pwd)/vim/tex.vim ~/.vim/ftplugin/tex.vim
-ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/ruby.vim
 ln -sf $(pwd)/vim/ruby.vim ~/.vim/ftplugin/json.vim
 
 ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
-ln -sf $(pwd)/config/gtk-3.0 ~/.config/gtk-3.0/settings.ini
-ln -sf $(pwd)/config/termite ~/.config/termite/config
-ln -sf $(pwd)/config/npmrc ~/.npmrc
-ln -sf $(pwd)/config/compton ~/.config/compton.conf
+ln -sf $(pwd)/config/termite-dark ~/.config/termite/config
 
 source ~/.zshrc
 vim +PlugInstall +PlugClean +qall

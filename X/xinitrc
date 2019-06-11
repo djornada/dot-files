@@ -1,4 +1,0 @@
-xrdb ~/.Xresources
-xset -b
-compton -b
-exec i3

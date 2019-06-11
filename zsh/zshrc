@@ -1,14 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="custom"
 
-plugins=(archlinux git npm yarn)
-
-NPM_PACKAGES="${HOME}/.npm-packages"
-PIP_PACKAGES="${HOME}/.local"
-
-PATH="$NPM_PACKAGES/bin:$PIP_PACKAGES/bin:$PATH"
-
-export PATH
+plugins=(archlinux git npm yarn nvm)
 
 export EDITOR="/usr/bin/vim"
 
@@ -37,3 +30,4 @@ function extract()
 		echo "'$1' is not a valid file!"
 	fi
 }
+source /usr/share/nvm/init-nvm.sh

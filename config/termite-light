@@ -1,0 +1,21 @@
+[colors]
+foreground      = #232322
+foreground_bold = #232322
+cursor          = #232322
+background      = #eaeaea
+color0  = #212121
+color8  = #424242
+color1  = #b7141f
+color9  = #e83b3f
+color2  = #457b24
+color10 = #7aba3a
+color3  = #f6981e
+color11 = #ffea2e
+color4  = #134eb2
+color12 = #54a4f3
+color5  = #560088
+color13 = #aa4dbc
+color6  = #0e717c
+color14 = #26bbd1
+color7  = #efefef
+color15 = #d9d9d9

@@ -1,35 +1,29 @@
 call plug#begin()
 
-Plug 'ashfinal/vim-colors-paper'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'elzr/vim-json', {'for': 'json'}
-Plug 'justinmk/vim-syntax-extra', {'for': 'c'}
-Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-signify'
-Plug 'mileszs/ack.vim'
+Plug 'nlknguyen/papercolor-theme'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'itchyny/lightline.vim'
+
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
 Plug 'othree/yajs.vim', {'for': 'javascript'}
+
+Plug 'junegunn/fzf.vim'
+Plug 'honza/dockerfile.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mhinz/vim-signify'
 Plug 'raimondi/delimitmate'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+
 Plug 'w0rp/ale'
-Plug 'wakatime/vim-wakatime'
 
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-Plug 'ryanolsonx/vim-lsp-javascript', {'for': 'javascript'}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
 
 call plug#end()
 
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
 
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
@@ -39,28 +33,28 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0
-
-let g:acp_enableAtStartup = 0
-
-let g:airline_powerline_fonts=1
+let g:ale_linters = {'javascript': ['standard']}
+let g:ale_fixers = {'javascript': ['standard']}
 
 let mapleader = ','
-let g:ackprg = 'ag --vimgrep'
 
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-g> :Rg<Cr>
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w!<cr>
 nnoremap <leader>w :w!<cr>
 nnoremap <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <space> /
 
-colorscheme paper
+colorscheme PaperColor
 
 set ai
 set autoread
 set background=dark
+set cmdheight=2
 set cursorline
+set hidden
 set ignorecase
 set incsearch
 set laststatus=2
@@ -68,22 +62,61 @@ set list
 set listchars=trail:·,tab:»\ ,eol:↲
 set ls=2
 set magic
+set nobackup
 set noexpandtab
+set noshowmode
 set nosmartindent
+set nowritebackup
 set number
 set ruler
 set shiftround
 set shiftwidth=4
+set shortmess+=c
+set signcolumn=yes
 set smartcase
 set splitbelow
 set splitright
 set tabstop=4
+set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 if has('conceal')
 	set conceallevel=2 concealcursor=niv
 endif
+
+let g:lightline = {
+  \ 'active': {
+  \   'left': [
+  \     [ 'mode', 'paste' ],
+  \     [ 'ctrlpmark', 'git', 'diagnostic', 'cocstatus', 'filename', 'method' ]
+  \   ],
+  \   'right':[
+  \     [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ],
+  \     [ 'blame' ]
+  \   ],
+  \ },
+  \ 'component_function': {
+  \   'blame': 'LightlineGitBlame',
+  \ }
+\ }
+
+function! LightlineGitBlame() abort
+  let blame = get(b:, 'coc_git_blame', '')
+  " return blame
+  return winwidth(0) > 120 ? blame : ''
+endfunction
 
 syntax on
 
