@@ -1,34 +1,32 @@
 call plug#begin()
 
-Plug 'nlknguyen/papercolor-theme'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'itchyny/lightline.vim'
-
-Plug 'mxw/vim-jsx', {'for': 'javascript'}
-Plug 'othree/yajs.vim', {'for': 'javascript'}
-
-Plug 'junegunn/fzf.vim'
-Plug 'honza/dockerfile.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'honza/dockerfile.vim'
+Plug 'honza/vim-snippets'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'mhinz/vim-signify'
+Plug 'mxw/vim-jsx', {'for': 'javascript'}
+Plug 'neoclide/coc.nvim', {'do': './install.sh'}
+Plug 'nlknguyen/papercolor-theme'
+Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'raimondi/delimitmate'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-
 Plug 'w0rp/ale'
-
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
 
 call plug#end()
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
 
 let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
@@ -81,11 +79,14 @@ set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
 
+inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -96,27 +97,6 @@ if has('conceal')
 	set conceallevel=2 concealcursor=niv
 endif
 
-let g:lightline = {
-  \ 'active': {
-  \   'left': [
-  \     [ 'mode', 'paste' ],
-  \     [ 'ctrlpmark', 'git', 'diagnostic', 'cocstatus', 'filename', 'method' ]
-  \   ],
-  \   'right':[
-  \     [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ],
-  \     [ 'blame' ]
-  \   ],
-  \ },
-  \ 'component_function': {
-  \   'blame': 'LightlineGitBlame',
-  \ }
-\ }
-
-function! LightlineGitBlame() abort
-  let blame = get(b:, 'coc_git_blame', '')
-  " return blame
-  return winwidth(0) > 120 ? blame : ''
-endfunction
 
 syntax on
 

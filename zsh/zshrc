@@ -30,4 +30,7 @@ function extract()
 		echo "'$1' is not a valid file!"
 	fi
 }
+export PATH
+
+zstyle ':completion:*' rehash true
 source /usr/share/nvm/init-nvm.sh
