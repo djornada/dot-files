@@ -15,9 +15,6 @@
 	
 [difftool]
 	prompt = false
-	
-[url "https://djornada@github.com"]
-	insteadOf = https://github.com
-	
+
 [alias]
 	st = status

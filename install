@@ -19,8 +19,8 @@ ln -sf $(pwd)/config/vimperatorrc ~/.vimperatorrc
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
-ln -sf $(pwd)/config/termite-dark ~/.config/termite/config
-ln -sf $(pwd)/config/termite-dark ~/.config/termite/config
+ln -sf $(pwd)/config/termite ~/.config/termite/config
+ln -sf $(pwd)/config/Xresources ~/.Xresources
 
 source ~/.zshrc
 
