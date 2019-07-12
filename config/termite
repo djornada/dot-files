@@ -1,26 +1,43 @@
 # vim: ft=dosini cms=#%s
 
 [options]
+allow_bold = true
+audible_bell = true
+browser = xdg-open
+clickable_url = true
+cursor_blink = system
+cursor_shape = block
+dynamic_title = true
+filter_unmatched_urls = true
 font=FuraCode Nerd Font Mono 10
+geometry = 480x280
+icon_name = terminal
+modify_other_keys = false
+mouse_autohide = true
+scroll_on_keystroke = true
+scroll_on_output = false
+scrollback_lines = 15000
+search_wrap = true
+size_hints = false
+urgent_on_bell = true
+highlight = #30343E
 [colors]
-foreground       = #F8F8F2
-foreground_bold  = #F8F8F2
-background       = #282A36
-highlight        = #44475A
-
-color0           = #21222C
-color1           = #FF5555
-color2           = #50FA7B
-color3           = #F1FA8C
-color4           = #BD93F9
-color5           = #FF79C6
-color6           = #8BE9FD
-color7           = #F8F8F2
-color8           = #6272A4
-color9           = #FF6E6E
-color10          = #69FF94
-color11          = #FFFFA5
-color12          = #D6ACFF
-color13          = #FF92DF
-color14          = #A4FFFF
-color15          = #FFFFFF
+cursor=#F8F8F2
+foreground=#F8F8F2
+background=#282A36
+color0=#000000
+color1=#FF5555
+color2=#50FA7B
+color3=#F1FA8C
+color4=#CAA9FA
+color5=#FF79C6
+color6=#8BE9FD
+color7=#BFBFBF
+color8=#4D4D4D
+color9=#FF6E67
+color10=#5AF78E
+color11=#F4F99D
+color12=#CAA9FA
+color13=#FF92D0
+color14=#9AEDFE
+color15=#E6E6E6
