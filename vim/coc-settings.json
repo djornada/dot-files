@@ -1,4 +1,5 @@
 {
+  "suggest.floatEnable": false,
   "suggest.snippetIndicator": "►",
   "suggest.minTriggerInputLength": 2,
   "snippets.extends" :{

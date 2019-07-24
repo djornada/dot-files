@@ -1,20 +1,21 @@
 call plug#begin()
 
-Plug 'delphinus/lightline-delphinus'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'honza/dockerfile.vim'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-signify'
+Plug 'luochen1990/rainbow'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
 Plug 'neoclide/coc.nvim', {'do': './install.sh'}
-Plug 'othree/yajs.vim', {'for': 'javascript'}
 Plug 'raimondi/delimitmate'
-Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -24,6 +25,10 @@ call plug#end()
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
+syntax on
+colorscheme onedark
+
+let g:rainbow_active = 1
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
 
@@ -36,6 +41,27 @@ let g:ale_lint_on_enter = 0
 let g:ale_linters = {'javascript': ['standard']}
 let g:ale_fixers = {'javascript': ['standard']}
 
+let g:lightline = {
+\ 'colorscheme': 'onedark',
+\   'active': {
+\     'left':[ [ 'mode', 'paste' ],
+\              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+\     ]
+\   },
+\   'component': {
+\     'lineinfo': ' %3l:%-2v',
+\   },
+\   'component_function': {
+\     'gitbranch': 'fugitive#head',
+\   }
+\ }
+let g:lightline.separator = {
+\   'left': '', 'right': ''
+\}
+let g:lightline.subseparator = {
+\   'left': '', 'right': ''
+\}
+
 let mapleader = ','
 
 nnoremap <C-p> :Files<Cr>
@@ -45,8 +71,6 @@ nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w!<cr>
 nnoremap <leader>w :w!<cr>
 nnoremap <space> /
-
-colorscheme dracula
 
 set ai
 set autoread
@@ -75,7 +99,6 @@ set smartcase
 set splitbelow
 set splitright
 set tabstop=4
-set t_Co=16
 set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
@@ -99,7 +122,9 @@ if has('conceal')
 endif
 
 
-syntax on
+if (has("termguicolors"))
+	set termguicolors
+endif
 
 set guioptions-=m "remove menu bar
 set guioptions-=T "remove tool bar
