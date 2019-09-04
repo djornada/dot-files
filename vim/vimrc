@@ -8,7 +8,6 @@ Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
-Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
 Plug 'neoclide/coc.nvim', {'do': './install.sh'}
@@ -26,7 +25,7 @@ call plug#end()
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 syntax on
-colorscheme onedark
+colorscheme nord
 
 let g:rainbow_active = 1
 let g:jsx_ext_required = 0
@@ -38,11 +37,9 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0
-let g:ale_linters = {'javascript': ['standard']}
-let g:ale_fixers = {'javascript': ['standard']}
 
 let g:lightline = {
-\ 'colorscheme': 'onedark',
+\ 'colorscheme': 'nord',
 \   'active': {
 \     'left':[ [ 'mode', 'paste' ],
 \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
@@ -62,15 +59,13 @@ let g:lightline.subseparator = {
 \   'left': '', 'right': ''
 \}
 
-let mapleader = ','
+let mapleader = ' '
 
 nnoremap <C-p> :Files<Cr>
 nnoremap <C-g> :Rg<Cr>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w!<cr>
-nnoremap <leader>w :w!<cr>
-nnoremap <space> /
 
 set ai
 set autoread
