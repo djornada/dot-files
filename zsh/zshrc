@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="custom"
 
-plugins=(archlinux git npm yarn nvm tmuxinator)
+plugins=(archlinux git npm yarn tmuxinator)
 
 export TERM="xterm-256color"
 export EDITOR="/usr/bin/vim"
@@ -34,7 +34,3 @@ function extract()
 export PATH
 
 zstyle ':completion:*' rehash true
-source /usr/share/nvm/init-nvm.sh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"

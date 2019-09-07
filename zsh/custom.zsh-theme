@@ -1,32 +1,27 @@
-setopt prompt_subst
-
 () {
 
 local PR_USER PR_USER_OP PR_PROMPT PR_HOST
 
 if [[ $UID -ne 0 ]]; then
-  PR_USER='%F{green}%n%f'
-  PR_USER_OP='%F{green}%#%f'
-  PR_PROMPT='%f➤ %f'
+  PR_PROMPT_F1='%F{blue}╭─ %f'
+  PR_PROMPT_DIR='%B%F{blue}%~%f%b'
+  PR_PROMPT_F2='%F{blue}╰─➤ %f'
+  ZSH_THEME_GIT_PROMPT_PREFIX="%F{blue}‹ "
+  ZSH_THEME_GIT_PROMPT_SUFFIX="› %f"
 else
-  PR_USER='%F{red}%n%f'
-  PR_USER_OP='%F{red}%#%f'
-  PR_PROMPT='%F{red}➤ %f'
+  PR_PROMPT_F1='%F{red}╭─ %f'
+  PR_PROMPT_DIR='%B%F{red}%~%f%b'
+  PR_PROMPT_F2='%F{red}╰─➤ %f'
+  ZSH_THEME_GIT_PROMPT_PREFIX="%F{red}‹ "
+  ZSH_THEME_GIT_PROMPT_SUFFIX="› %f"
 fi
 
 local return_code="%(?..%F{red}%? ↵%f)"
-local current_dir="%B%F{blue}%~%f%b"
-local nvm_nodejs=''
-if nvm &> /dev/null; then
-  nvm_nodejs='%F{green}‹⬢ $(nvm version)›%f'
-fi
 local git_branch=' $(git_prompt_info)'
 
-PROMPT="╭─ ${current_dir} ${nvm_nodejs}
-╰─$PR_PROMPT "
+PROMPT="${PR_PROMPT_F1}${PR_PROMPT_DIR}
+${PR_PROMPT_F2}$PR_PROMPT"
 RPROMPT="${git_branch} ${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}‹ "
-ZSH_THEME_GIT_PROMPT_SUFFIX="› %f"
 
 }
