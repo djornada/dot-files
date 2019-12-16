@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
+Plug 'colepeters/spacemacs-theme.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'honza/dockerfile.vim'
 Plug 'honza/vim-snippets'
@@ -12,6 +13,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
 Plug 'neoclide/coc.nvim', {'do': './install.sh'}
 Plug 'raimondi/delimitmate'
+Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -25,7 +27,7 @@ call plug#end()
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 syntax on
-colorscheme nord
+colorscheme one
 
 let g:rainbow_active = 1
 let g:jsx_ext_required = 0
@@ -37,9 +39,10 @@ let g:ale_lint_on_text_changed = 0
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0
+let g:one_allow_italics = 1
 
 let g:lightline = {
-\ 'colorscheme': 'nord',
+\   'colorscheme': 'one',
 \   'active': {
 \     'left':[ [ 'mode', 'paste' ],
 \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
@@ -69,8 +72,8 @@ nnoremap <leader>w :w!<cr>
 
 set ai
 set autoread
+set background=dark
 set cmdheight=2
-set cursorline
 set hidden
 set ignorecase
 set incsearch
@@ -98,6 +101,8 @@ set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
 
+nnoremap <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -114,6 +119,10 @@ endfunction
 
 if has('conceal')
 	set conceallevel=2 concealcursor=niv
+endif
+
+if (has("termguicolors"))
+  set termguicolors
 endif
 
 set guioptions-=m "remove menu bar
