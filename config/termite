@@ -1,31 +1,30 @@
 [options]
 allow_bold = true
-audible_bell = true
+audible_bell = false
 browser = xdg-open
 clickable_url = true
 cursor_blink = system
 cursor_shape = block
 dynamic_title = true
 filter_unmatched_urls = true
-font = Iosevka Nerd Font 10
-geometry = 480x280
+font = Fira Code 10
+geometry = 900x650
+highlight = #2F2F2F
 icon_name = terminal
 modify_other_keys = false
-mouse_autohide = true
+mouse_autohide = false
 scroll_on_output = false
 scroll_on_keystroke = true
 scrollback_lines = 15000
 size_hints = false
 search_wrap = true
 urgent_on_bell = true
-highlight = #30343e
 
 [colors]
-foreground          = #abb2bf
-foreground_bold     = #b6bdca
-cursor              = #b6bdca
-cursor_foreground   = #282c34
-background          = rgba(40, 44, 52)
+foreground      = #ABB2BF
+foreground_bold = #B6BDCA
+cursor          = #B6BDCA
+background      = #282C34
 
 color0  = #282C34
 color1  = #E06C75
