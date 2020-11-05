@@ -11,7 +11,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
 Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx', {'for': 'javascript'}
-Plug 'neoclide/coc.nvim', {'do': './install.sh'}
+Plug 'neoclide/coc.nvim'
 Plug 'raimondi/delimitmate'
 Plug 'rakr/vim-one'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -40,6 +40,7 @@ let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0
 let g:one_allow_italics = 1
+let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-css','coc-json', 'coc-git', 'coc-tabnine']
 
 let g:lightline = {
 \   'colorscheme': 'one',
