@@ -1,7 +1,7 @@
 # vim: set ft=gitconfig:
 
 [user]
-	email = diego.p.jornada@gmail.com
+	email = djornada@outlook.com
 	name = Diego Pinto da Jornada
 [push]
 	default = matching
@@ -12,9 +12,11 @@
 
 [diff]
 	tool = vimdiff
-	
+
 [difftool]
 	prompt = false
 
 [alias]
 	st = status
+[pager]
+	branch = false
