@@ -1,5 +1,4 @@
 call plug#begin()
-
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'colepeters/spacemacs-theme.vim'
@@ -7,6 +6,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'honza/dockerfile.vim'
 Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
 Plug 'sheerun/vim-polyglot'
@@ -21,24 +21,17 @@ Plug 'tpope/vim-markdown', {'for': 'markdown'}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
-
 call plug#end()
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 syntax on
-colorscheme one
+colorscheme nord
 
 let g:rainbow_active = 1
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
 
-let g:ale_lint_on_save = 1
-let g:ale_fix_on_save = 1
-let g:ale_lint_on_text_changed = 0
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '.'
-let g:ale_lint_on_enter = 0
 let g:one_allow_italics = 1
 let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-css','coc-json', 'coc-git', 'coc-tabnine']
 
@@ -70,6 +63,26 @@ nnoremap <C-g> :Rg<Cr>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w!<cr>
+nnoremap <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+nmap <leader>rn <Plug>(coc-rename)
+
+imap <C-l> <Plug>(coc-snippets-expand)
+vmap <C-j> <Plug>(coc-snippets-select)
+
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+xmap <leader>x  <Plug>(coc-convert-snippet)
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 set ai
 set autoread
@@ -102,21 +115,6 @@ set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
 
-nnoremap <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
-
-inoremap <silent><expr> <c-space> coc#refresh()
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
 if has('conceal')
 	set conceallevel=2 concealcursor=niv

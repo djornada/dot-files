@@ -1,8 +1,10 @@
 {
-  "suggest.floatEnable": false,
+  "suggest.floatEnable": true,
   "suggest.snippetIndicator": "►",
   "suggest.minTriggerInputLength": 2,
   "snippets.extends" :{
     "javascriptreact": ["javascript"]
-  }
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact"]
 }
