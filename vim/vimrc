@@ -39,7 +39,7 @@ let g:lightline = {
 \   'colorscheme': 'one',
 \   'active': {
 \     'left':[ [ 'mode', 'paste' ],
-\              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+\              [ 'readonly', 'filename', 'modified' ]
 \     ]
 \   },
 \   'component': {
@@ -49,12 +49,6 @@ let g:lightline = {
 \     'gitbranch': 'fugitive#head',
 \   }
 \ }
-let g:lightline.separator = {
-\   'left': '', 'right': ''
-\}
-let g:lightline.subseparator = {
-\   'left': '', 'right': ''
-\}
 
 let mapleader = ' '
 
@@ -63,7 +57,6 @@ nnoremap <C-g> :Rg<Cr>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>w :w!<cr>
-nnoremap <leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nmap <leader>rn <Plug>(coc-rename)
 
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -99,7 +92,6 @@ set magic
 set nobackup
 set noexpandtab
 set noshowmode
-set nosmartindent
 set nowritebackup
 set number
 set ruler
@@ -124,7 +116,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-set guioptions-=m "remove menu bar
-set guioptions-=T "remove tool bar
-set guioptions-=r "remove right hand scroll bar
-set guioptions-=L "remove left hand scroll bar
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
