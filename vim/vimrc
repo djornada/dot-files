@@ -33,7 +33,7 @@ let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1
 
 let g:one_allow_italics = 1
-let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-css','coc-json', 'coc-git', 'coc-tabnine']
+let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-css','coc-json', 'coc-git', 'coc-tabnine', 'coc-eslint']
 
 let g:lightline = {
 \   'colorscheme': 'one',
@@ -98,7 +98,6 @@ set ruler
 set shiftround
 set shiftwidth=4
 set shortmess+=c
-set signcolumn=yes
 set smartcase
 set splitbelow
 set splitright
@@ -106,6 +105,12 @@ set tabstop=4
 set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
+
+if has("patch-8.1.1564")
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 
 if has('conceal')

@@ -5,6 +5,8 @@
   "snippets.extends" :{
     "javascriptreact": ["javascript"]
   },
+  "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": ["javascript", "javascriptreact"]
+  "eslint.format.enable": true,
+  "json.enable": true
 }
