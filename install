@@ -1,6 +1,5 @@
 #!/bin/sh
 
-[ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
 [ -d ~/.config ] || mkdir -p ~/.config/termite
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
