@@ -20,7 +20,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown', {'for': 'markdown'}
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
 call plug#end()
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
@@ -36,7 +35,7 @@ let g:one_allow_italics = 1
 let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-css','coc-json', 'coc-git', 'coc-tabnine', 'coc-eslint']
 
 let g:lightline = {
-\   'colorscheme': 'one',
+\   'colorscheme': 'nord',
 \   'active': {
 \     'left':[ [ 'mode', 'paste' ],
 \              [ 'readonly', 'filename', 'modified' ]

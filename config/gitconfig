@@ -2,7 +2,7 @@
 
 [user]
 	email = djornada@outlook.com
-	name = Diego Pinto da Jornada
+	name = djornada
 [push]
 	default = matching
 [core]
@@ -19,3 +19,7 @@
 	branch = false
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
