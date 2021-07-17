@@ -1,0 +1,57 @@
+# vim: set ft=yaml:
+window:
+  padding:
+    x: 12
+    y: 12
+  dimensions:
+    columns: 95
+    lines: 20
+  decorations: none
+  dynamic_padding: false
+  startup_mode: Maximized
+scrolling:
+  history: 50000
+font:
+  normal:
+    family: Operator Mono
+    style: Book
+
+  bold:
+    family: Operator Mono
+    style: Bold
+
+  italic:
+    family: Operator Mono
+    style: Book Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+  size: 10.0
+
+colors:
+  primary:
+    background: '0x262335'
+    foreground: '0xffffff'
+
+  normal:
+    black:   '0x403E41'
+    red:     '0xfe4450'
+    green:   '0x72f1b8'
+    yellow:  '0xfede5d'
+    blue:    '0x03edf9'
+    magenta: '0xff7edb'
+    cyan:    '0x03edf9'
+    white:   '0xfcfcfc'
+
+  bright:
+    black:   '0x727072'
+    red:     '0xfe4450'
+    green:   '0x72f1b8'
+    yellow:  '0xfede5d'
+    blue:    '0x03edf9'
+    magenta: '0xff7edb'
+    cyan:    '0x03edf9'
+    white:   '0xfcfcfc'
+
+background_opacity: 0.95

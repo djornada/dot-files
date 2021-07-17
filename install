@@ -1,6 +1,7 @@
 #!/bin/sh
 
-[ -d ~/.config ] || mkdir -p ~/.config/termite
+[ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
+[ -d ~/.config ] || mkdir -p ~/.config/{termite,alacritty}
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh 
 [ -f ~/.vim/autoload/plug.vim ] ||  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -15,6 +16,7 @@ ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/config/termite ~/.config/termite/config
+ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/config/Xresources ~/.Xresources
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
 

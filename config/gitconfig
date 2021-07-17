@@ -1,25 +1,24 @@
 # vim: set ft=gitconfig:
 
 [user]
-	email = djornada@outlook.com
-	name = djornada
+  email = djornada@outlook.com
+  name = djornada
 [push]
-	default = matching
+  default = matching
 [core]
-	editor = vim
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore_global
+  editor = vim
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = ~/.gitignore_global
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [difftool]
-	prompt = false
-[alias]
-	st = status
+  prompt = false
 [pager]
-	branch = false
+  branch = false
 [pull]
 	rebase = true
 [init]
 	defaultBranch = main
 [commit]
 	gpgsign = true
+  rebase = true

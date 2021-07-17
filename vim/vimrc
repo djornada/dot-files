@@ -1,31 +1,45 @@
 call plug#begin()
-Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
-Plug 'colepeters/spacemacs-theme.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'honza/dockerfile.vim'
-Plug 'honza/vim-snippets'
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'luochen1990/rainbow'
-Plug 'sheerun/vim-polyglot'
-Plug 'mxw/vim-jsx', {'for': 'javascript'}
-Plug 'neoclide/coc.nvim'
-Plug 'raimondi/delimitmate'
-Plug 'rakr/vim-one'
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-markdown', {'for': 'markdown'}
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'artanikin/vim-synthwave84'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'honza/dockerfile.vim'
+  Plug 'honza/vim-snippets'
+  Plug 'itchyny/lightline.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'luochen1990/rainbow'
+  Plug 'mxw/vim-jsx', {'for': 'javascript'}
+  Plug 'neoclide/coc.nvim'
+  Plug 'raimondi/delimitmate'
+  Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+  Plug 'sheerun/vim-polyglot'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-markdown', {'for': 'markdown'}
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
+  Plug 'w0rp/ale'
 call plug#end()
+
+if has("patch-8.1.1564")
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
+
+
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 syntax on
-colorscheme nord
+colorscheme synthwave84
 
 let g:rainbow_active = 1
 let g:jsx_ext_required = 0
@@ -35,10 +49,9 @@ let g:one_allow_italics = 1
 let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-css','coc-json', 'coc-git', 'coc-tabnine', 'coc-eslint']
 
 let g:lightline = {
-\   'colorscheme': 'nord',
 \   'active': {
 \     'left':[ [ 'mode', 'paste' ],
-\              [ 'readonly', 'filename', 'modified' ]
+\              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
 \     ]
 \   },
 \   'component': {
@@ -64,7 +77,6 @@ vmap <C-j> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
-xmap <leader>x  <Plug>(coc-convert-snippet)
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
@@ -78,7 +90,6 @@ endfunction
 
 set ai
 set autoread
-set background=dark
 set cmdheight=2
 set hidden
 set ignorecase
@@ -104,21 +115,6 @@ set tabstop=4
 set updatetime=300
 set wildignore=*.o,*.obj,*~,node_modules
 set wildmenu
-
-if has("patch-8.1.1564")
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-
-
-if has('conceal')
-	set conceallevel=2 concealcursor=niv
-endif
-
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 set guioptions-=m
 set guioptions-=T
