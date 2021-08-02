@@ -27,7 +27,6 @@ else
   set signcolumn=yes
 endif
 
-
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
@@ -39,7 +38,6 @@ endif
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 
 syntax on
-colorscheme synthwave84
 
 let g:rainbow_active = 1
 let g:jsx_ext_required = 0
@@ -87,6 +85,8 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+colorscheme synthwave84
 
 set ai
 set autoread
