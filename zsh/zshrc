@@ -13,3 +13,4 @@ export PATH
 
 zstyle ':completion:*' rehash true
 eval "$(starship init zsh)"
+source /usr/share/nvm/init-nvm.sh
