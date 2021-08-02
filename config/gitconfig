@@ -3,6 +3,7 @@
 [user]
   email = djornada@outlook.com
   name = djornada
+  signingkey = 427D5F62C5DBD79D
 [push]
   default = matching
 [core]
@@ -16,9 +17,9 @@
 [pager]
   branch = false
 [pull]
-	rebase = true
+  rebase = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [commit]
-	gpgsign = true
+  gpgsign = true
   rebase = true
