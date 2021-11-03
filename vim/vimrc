@@ -11,7 +11,7 @@ call plug#begin()
   Plug 'leafgarland/typescript-vim'
   Plug 'luochen1990/rainbow'
   Plug 'mxw/vim-jsx', {'for': 'javascript'}
-  Plug 'neoclide/coc.nvim'
+  Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
   Plug 'pangloss/vim-javascript'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'raimondi/delimitmate'
