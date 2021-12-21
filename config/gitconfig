@@ -3,7 +3,7 @@
 [user]
   email = djornada@outlook.com
   name = djornada
-  signingkey = 427D5F62C5DBD79D
+  signingkey = 6ADAF92AA8229E04
 [push]
   default = matching
 [core]
