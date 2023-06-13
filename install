@@ -16,10 +16,14 @@ ln -sf $(pwd)/vim/coc-settings.json ~/.vim/coc-settings.json
 
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
+ln -sf $(pwd)/config/gitconfig-work ~/.gitconfig-work
+
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
+
 ln -sf $(pwd)/config/termite ~/.config/termite/config
 ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/config/Xresources ~/.Xresources
+
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
 
 vim -c 'PlugInstall|PlugClean|qall'

@@ -1,9 +1,16 @@
 # vim: set ft=gitconfig:
-
+#
 [user]
   email = djornada@outlook.com
   name = djornada
-  signingkey = 6ADAF92AA8229E04
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9L/VT2fnOqLJaHYFUDhwigih7n0yjkcLIfMzMNpAeM
+
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig-work
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/opt/1Password/op-ssh-sign"
 [push]
   default = matching
 [core]
