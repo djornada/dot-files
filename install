@@ -2,7 +2,7 @@
 
 [ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
 [ -d ~/.local/share/fonts/ttf ] || mkdir -p ~/.local/share/fonts/ttf
-[ -d ~/.config ] || mkdir -p ~/.config/{termite,alacritty}
+[ -d ~/.config ] || mkdir -p ~/.config/{alacritty,nvim}
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 [ -f ~/.vim/autoload/plug.vim ] || curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -11,6 +11,11 @@
 	                                                 ~/.config/alacritty/catppuccin
 [ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm \
                                        ~/.tmux/plugins/tpm
+
+[ -d ~/.config/nvim ] || git clone --depth 1 https://github.com/AstroNvim/AstroNvim \
+                                             ~/.config/nvim
+
+[ -d ~/.config/nvim/lua/user ] || mkdir -p ~/.config/nvim/lua/user
 
 cp -r ./fonts/* ~/.local/share/fonts/ttf/ && fc-cache
 
