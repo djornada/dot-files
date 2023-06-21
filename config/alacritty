@@ -12,21 +12,21 @@ scrolling:
   history: 50000
 font:
   normal:
-    family: Operator Mono
-    style: Book
+    family: Hack Nerd Font Mono
+    style: Regular
 
   bold:
-    family: Operator Mono
+    family: Hack Nerd Font Mono
     style: Bold
 
   italic:
-    family: Operator Mono
-    style: Book Italic
+    family: Hack Nerd Font Mono
+    style: Italic
 
   bold_italic:
-    family: monospace
+    family: Hack Nerd Font Mono
     style: Bold Italic
-  size: 10.0
+  size: 12.0
 
 colors:
   primary:
@@ -53,4 +53,3 @@ colors:
     cyan:    '0x03edf9'
     white:   '0xfcfcfc'
 
-background_opacity: 0.95
