@@ -1,4 +1,6 @@
 # vim: set ft=yaml:
+env:
+  TERM: xterm-256color
 window:
   padding:
     x: 12
@@ -28,28 +30,5 @@ font:
     style: Bold Italic
   size: 12.0
 
-colors:
-  primary:
-    background: '0x262335'
-    foreground: '0xffffff'
-
-  normal:
-    black:   '0x403E41'
-    red:     '0xfe4450'
-    green:   '0x72f1b8'
-    yellow:  '0xfede5d'
-    blue:    '0x03edf9'
-    magenta: '0xff7edb'
-    cyan:    '0x03edf9'
-    white:   '0xfcfcfc'
-
-  bright:
-    black:   '0x727072'
-    red:     '0xfe4450'
-    green:   '0x72f1b8'
-    yellow:  '0xfede5d'
-    blue:    '0x03edf9'
-    magenta: '0xff7edb'
-    cyan:    '0x03edf9'
-    white:   '0xfcfcfc'
-
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
