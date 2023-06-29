@@ -35,5 +35,6 @@ ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/config/Xresources ~/.Xresources
 
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
+ln -sf $(pwd)/config/nvim ~/.config/nvim/lua/user
 
 vim -c 'PlugInstall|PlugClean|qall'
