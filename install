@@ -2,22 +2,23 @@
 
 [ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
 [ -d ~/.local/share/fonts/ttf ] || mkdir -p ~/.local/share/fonts/ttf
-[ -d ~/.config ] || mkdir -p ~/.config/{alacritty,nvim}
-[ -d ~/.config/nvim/lua/user ] || mkdir -p ~/.config/nvim/lua/user
+[ -d ~/.config ] || mkdir -p ~/.config/{alacritty}
 
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
 [ -f ~/.vim/autoload/plug.vim ] || curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	                                 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+                                             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 [ -d ~/.config/alacritty/catppuccin ] || git clone https://github.com/catppuccin/alacritty.git \
-	                                                 ~/.config/alacritty/catppuccin
+	~/.config/alacritty/catppuccin
 
 [ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm \
-                                       ~/.tmux/plugins/tpm
+                                             ~/.tmux/plugins/tpm
 
 [ -d ~/.config/nvim ] || git clone --depth 1 https://github.com/AstroNvim/AstroNvim \
                                              ~/.config/nvim
+
+[ -d ~/.config/nvim/lua/user ] || mkdir -p ~/.config/nvim/lua/user
 
 cp -r ./fonts/* ~/.local/share/fonts/ttf/ && fc-cache
 
@@ -35,6 +36,6 @@ ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/config/Xresources ~/.Xresources
 
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
-ln -sf $(pwd)/config/nvim ~/.config/nvim/lua/user
+ln -sf $(pwd)/nvim ~/.config/nvim/lua/user
 
 vim -c 'PlugInstall|PlugClean|qall'
