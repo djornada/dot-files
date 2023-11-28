@@ -18,8 +18,6 @@
 [ -d ~/.config/nvim ] || git clone --depth 1 https://github.com/AstroNvim/AstroNvim \
                                              ~/.config/nvim
 
-[ -d ~/.config/nvim/lua/user ] || mkdir -p ~/.config/nvim/lua/user
-
 cp -r ./fonts/* ~/.local/share/fonts/ttf/ && fc-cache
 
 ln -sf $(pwd)/zsh/zshrc ~/.zshrc
@@ -36,6 +34,6 @@ ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.yml
 ln -sf $(pwd)/config/Xresources ~/.Xresources
 
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
-ln -sf $(pwd)/nvim ~/.config/nvim/lua/user
+ln -sf $(pwd)/nvim/ ~/.config/nvim/lua/user
 
 vim -c 'PlugInstall|PlugClean|qall'
