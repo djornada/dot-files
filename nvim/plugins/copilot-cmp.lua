@@ -1,5 +1,4 @@
 return {
-  { import = "astrocommunity.completion.copilot-lua" },
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "zbirenbaum/copilot.lua" },
