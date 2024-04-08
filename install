@@ -30,7 +30,7 @@ ln -sf $(pwd)/config/gitconfig-work ~/.gitconfig-work
 
 ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
 
-ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.yml
+ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.toml
 ln -sf $(pwd)/config/Xresources ~/.Xresources
 
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
