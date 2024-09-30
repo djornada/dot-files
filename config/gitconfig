@@ -3,7 +3,7 @@
 [user]
   email = djornada@outlook.com
   name = djornada
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9L/VT2fnOqLJaHYFUDhwigih7n0yjkcLIfMzMNpAeM
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDLw2hJbhj3mtjfNxP8t+4Q5Qs74hs0zFo64Z0gtlmbE 
 
 [includeIf "gitdir:~/work/"]
   path = ~/.gitconfig-work
@@ -14,11 +14,11 @@
 [push]
   default = matching
 [core]
-  editor = vim
+  editor = nvim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = ~/.gitignore_global
 [diff]
-  tool = vimdiff
+  tool = nvim -d
 [difftool]
   prompt = false
 [pager]
