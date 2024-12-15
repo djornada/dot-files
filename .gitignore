@@ -1,2 +1,5 @@
 config/gitconfig-work
 
+nvim/.stylua.toml
+nvim/lazy-lock.json
+nvim/.neoconf.json
