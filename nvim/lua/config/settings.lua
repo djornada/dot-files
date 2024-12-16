@@ -1,0 +1,23 @@
+local global = vim.g
+local opt = vim.opt
+
+opt.number = true
+opt.clipboard = "unnamedplus"
+opt.syntax = "on"
+opt.autoindent = true
+opt.cursorline = true
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.tabstop = 2
+opt.encoding = "UTF-8"
+opt.mouse = "a"
+opt.title = true
+opt.hidden = true
+opt.ttimeoutlen = 0
+opt.wildmenu = true
+opt.showcmd = true
+opt.showmatch = true
+opt.inccommand = "split"
+opt.splitright = true
+opt.splitbelow = true
+opt.termguicolors = true

@@ -1,3 +1,5 @@
+# vim: set ft=tmux:
+
 unbind C-b
 set -g prefix C-Space
 bind C-Space send-prefix

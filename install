@@ -1,39 +1,19 @@
 #!/bin/sh
+# Req: nvim, kitty, ripgrep, fnm, tmux, fzf
 
-[ -d ~/.vim/ftplugin ] || mkdir -p ~/.vim/ftplugin
+[ -d ~/.config ] || mkdir ~/.config
 [ -d ~/.local/share/fonts/ttf ] || mkdir -p ~/.local/share/fonts/ttf
-[ -d ~/.config ] || mkdir -p ~/.config/{alacritty}
-
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-[ -f ~/.vim/autoload/plug.vim ] || curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-                                             https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-[ -d ~/.config/alacritty/catppuccin ] || git clone https://github.com/catppuccin/alacritty.git \
-	~/.config/alacritty/catppuccin
-
-[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm \
-                                             ~/.tmux/plugins/tpm
-
-[ -d ~/.config/nvim ] || git clone --depth 1 https://github.com/AstroNvim/AstroNvim \
-                                             ~/.config/nvim
-
-cp -r ./fonts/* ~/.local/share/fonts/ttf/ && fc-cache
+[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ln -sf $(pwd)/zsh/zshrc ~/.zshrc
-ln -sf $(pwd)/vim/vimrc ~/.vimrc
-ln -sf $(pwd)/vim/coc-settings.json ~/.vim/coc-settings.json
 
 ln -sf $(pwd)/config/gitconfig ~/.gitconfig
 ln -sf $(pwd)/config/gitignore_global ~/.gitignore_global
 ln -sf $(pwd)/config/gitconfig-work ~/.gitconfig-work
-
-ln -sf $(pwd)/config/tmux.conf ~/.tmux.conf
-
-ln -sf $(pwd)/config/alacritty ~/.config/alacritty/alacritty.toml
-ln -sf $(pwd)/config/Xresources ~/.Xresources
-
+ln -sf $(pwd)/config/tmux ~/.tmux.conf
+ln -sf $(pwd)/config/starship ~/.config/starship.toml
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
-ln -sf $(pwd)/nvim/ ~/.config/nvim/lua/user
+ln -sf $(pwd)/nvim/ ~/.config/
 
-vim -c 'PlugInstall|PlugClean|qall'
+kitty +kitten themes --reload-in=all
