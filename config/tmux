@@ -18,19 +18,24 @@ bind-key | split-window -h -c '#{pane_current_path}'
 set  -g base-index 1
 setw -g pane-base-index 1
 
-set -g status-justify left
+set -g status-justify centre
+set -g status-right-length 100
+set -g status-left-length 100
 set -g status-left " "
-set -g status-right " "
+set -gF status-right "#{E:@catppuccin_status_directory}"
+set -agF status-right "#{E:@catppuccin_status_application}"
 set -g visual-activity on
 set -s escape-time 0
 set -g mouse on
 
 set-window-option -g mode-keys vi
 
-set -g @catppuccin_flavour 'mocha'
+set -g @catppuccin_flavor 'mocha'
+set -g @catppuccin_window_status_style 'rounded'
 
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'catppuccin/tmux'
+
 
 run '~/.tmux/plugins/tpm/tpm'
 
