@@ -2,7 +2,6 @@
 # Req: nvim, kitty, ripgrep, fnm, tmux, fzf
 
 [ -d ~/.config ] || mkdir ~/.config
-[ -d ~/.local/share/fonts/ttf ] || mkdir -p ~/.local/share/fonts/ttf
 [ -d ~/.oh-my-zsh ] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 [ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -14,6 +13,9 @@ ln -sf $(pwd)/config/gitconfig-work ~/.gitconfig-work
 ln -sf $(pwd)/config/tmux ~/.tmux.conf
 ln -sf $(pwd)/config/starship ~/.config/starship.toml
 ln -sf $(pwd)/config/ripgrep.ignore ~/.ignore
-ln -sf $(pwd)/nvim/ ~/.config/
 
-kitty +kitten themes --reload-in=all
+if [ -d ~/.config/nvim/lua/plugins ]; then
+  for f in $(pwd)/nvim/plugins/*.lua; do
+    ln -sf "$f" ~/.config/nvim/lua/plugins/"$(basename "$f")"
+  done
+fi

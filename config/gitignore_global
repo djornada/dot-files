@@ -3,3 +3,5 @@
 *.swp
 *.iml
 
+
+**/.claude/settings.local.json
