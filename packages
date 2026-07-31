@@ -1,0 +1,27 @@
+#!/bin/sh
+# Installs software required by these dotfiles (Arch/Manjaro, pamac)
+
+PKGS="
+neovim
+kitty
+ripgrep
+tmux
+fzf
+zsh
+git
+starship
+zoxide
+bat
+fnm
+go
+mkcert
+pnpm
+ttf-jetbrains-mono-nerd
+"
+
+AUR_PKGS="
+tmuxinator
+"
+
+pamac install --no-confirm $PKGS
+pamac build --no-confirm $AUR_PKGS
