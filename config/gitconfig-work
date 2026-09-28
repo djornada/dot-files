@@ -1,4 +1,4 @@
 # vim: set ft=gitconfig:
 [user]
-  email = diego.jornada@ab-inbev.com
+  email = WORK_EMAIL
   name = Diego Pinto da Jornada
