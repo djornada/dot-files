@@ -27,7 +27,7 @@ if [ -d "$FNM_PATH" ]; then
 	*":$FNM_PATH:"*) ;;
 	*) export PATH="$FNM_PATH:$PATH" ;;
 	esac
-	eval "$(fnm env)"
+	eval "$(fnm env --use-on-cd --shell zsh)"
 fi
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
